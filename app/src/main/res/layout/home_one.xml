@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <!--中间为一条分割线-->
+    <View
+        android:background="@color/colorGreyBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <!--最下边为RadioGroup-->
+    <RadioGroup
+        android:id="@+id/mBottomGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--第一个RadioButton-->
+        <RadioButton
+            android:drawablePadding="5dp"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/my_home"
+            android:text="首页"
+            android:button="@null"
+            android:textColor="@drawable/selector_text"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第二个RadioButton-->
+        <RadioButton
+            android:drawablePadding="5dp"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/my_fors"
+            android:text="4S店"
+            android:button="@null"
+            android:textColor="@drawable/selector_text"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_manger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第三个RadioButton-->
+        <RadioButton
+            android:drawablePadding="5dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/my_shoping"
+            android:text="购物车"
+            android:button="@null"
+            android:textColor="@drawable/selector_text"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第四个RadioButton-->
+        <RadioButton
+            android:drawablePadding="5dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/my_myprison"
+            android:text="我的"
+            android:button="@null"
+            android:textColor="@drawable/selector_text"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_love"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+</LinearLayout>
