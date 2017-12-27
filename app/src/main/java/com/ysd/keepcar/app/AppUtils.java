@@ -3,6 +3,7 @@ package com.ysd.keepcar.app;
 import android.app.Application;
 
 import com.ysd.keepcar.base.BaseActivity;
+import com.zhy.autolayout.config.AutoLayoutConifg;
 
 
 /**
@@ -14,6 +15,6 @@ public static BaseActivity context=null;
     @Override
     public void onCreate() {
         super.onCreate();
-
+        AutoLayoutConifg.getInstance().useDeviceSize();
     }
 }
