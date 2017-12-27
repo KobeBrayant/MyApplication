@@ -1,4 +1,4 @@
-package com.ysd.keepcar.framents.shopingframents;
+package com.ysd.keepcar.ui.shopingframents;
 
 
 import android.support.v4.app.Fragment;

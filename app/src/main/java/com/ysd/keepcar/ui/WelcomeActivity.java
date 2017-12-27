@@ -1,4 +1,4 @@
-package com.ysd.keepcar.framents;
+package com.ysd.keepcar.ui;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,10 +11,10 @@ import android.widget.RadioGroup;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseActivity;
-import com.ysd.keepcar.framents.forsframents.ForSFragment;
-import com.ysd.keepcar.framents.homeframent.HomeFragment;
-import com.ysd.keepcar.framents.prisonframents.ProsionFraments;
-import com.ysd.keepcar.framents.shopingframents.ShopFraments;
+import com.ysd.keepcar.ui.forsframents.ForSFragment;
+import com.ysd.keepcar.ui.homeframent.HomeFragment;
+import com.ysd.keepcar.ui.prisonframents.ProsionFraments;
+import com.ysd.keepcar.ui.shopingframents.ShopFraments;
 
 import java.util.ArrayList;
 

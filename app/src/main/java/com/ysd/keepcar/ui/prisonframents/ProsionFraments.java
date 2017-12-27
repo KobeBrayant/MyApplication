@@ -1,4 +1,4 @@
-package com.ysd.keepcar.framents.homeframent;
+package com.ysd.keepcar.ui.prisonframents;
 
 
 import android.support.v4.app.Fragment;
@@ -6,14 +6,17 @@ import android.view.View;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends BaseFragMent {
+public class ProsionFraments extends BaseFragMent {
+
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_prosion_framents;
     }
 
     @Override

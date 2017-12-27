@@ -1,4 +1,4 @@
-package com.ysd.keepcar.framents.prisonframents;
+package com.ysd.keepcar.ui.forsframents;
 
 
 import android.support.v4.app.Fragment;
@@ -11,12 +11,12 @@ import com.ysd.keepcar.base.BaseFragMent;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProsionFraments extends BaseFragMent {
+public class ForSFragment extends BaseFragMent {
 
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_prosion_framents;
+        return R.layout.fragment_for;
     }
 
     @Override
