@@ -5,5 +5,8 @@ package com.ysd.keepcar.config;
  */
 
 public class HttpUrl {
+    public static  final String  BASEURL="http://39.106.173.47:8080/app/";
+    public static  final String  IMGBASE="http://39.106.173.47:8080/saas-img/";
+
 
 }

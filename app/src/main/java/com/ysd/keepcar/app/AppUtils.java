@@ -16,5 +16,6 @@ public static BaseActivity context=null;
     public void onCreate() {
         super.onCreate();
         AutoLayoutConifg.getInstance().useDeviceSize();
+
     }
 }
