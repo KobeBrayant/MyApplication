@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<com.youth.banner.Banner
+    android:id="@+id/home_banner"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"></com.youth.banner.Banner>
+    <View
+        android:background="#C0BBB7"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"></View>
+<RelativeLayout
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+    <ImageView
+        android:id="@+id/top_baoyang"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:src="@mipmap/dianbaoyang" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/top_baoyang"
+        android:layout_alignStart="@+id/top_baoyang"
+        android:layout_below="@+id/top_baoyang"
+        android:text="4S保养" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/top_baoyang"
+        android:layout_toRightOf="@+id/top_baoyang"
+        android:src="@mipmap/dianweixiu"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:text="4S店维修"
+        android:id="@+id/textView3" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:src="@mipmap/dianzhanting"
+        android:id="@+id/imageView2" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:text="4S店展厅"
+        android:id="@+id/textView4" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:src="@mipmap/dianxubao"
+        android:id="@+id/imageView3" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_below="@+id/imageView3"
+        android:text="4S店续保"
+        android:id="@+id/textView7" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@mipmap/dianjingpin"
+        android:id="@+id/imageView4" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_below="@+id/imageView4"
+        android:text="4S店精品"
+        android:id="@+id/textView8" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/xiche"
+        android:id="@+id/imageView5" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_below="@+id/imageView5"
+        android:text="   洗车" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignTop="@+id/imageView5"
+        android:src="@mipmap/jingcaihuodong"
+        android:id="@+id/imageView6" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/imageView6"
+        android:text="精彩活动" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/jifenshangcheng"
+        android:id="@+id/imageView7" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/imageView7"
+        android:text="精彩活动"
+        android:id="@+id/textView6" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textView6"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:src="@mipmap/weizhangchaxun"
+        android:id="@+id/imageView8" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView7"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_below="@+id/imageView8"
+        android:text="违章查询" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_alignTop="@+id/imageView8"
+        android:src="@mipmap/daolujiuyuan"
+        android:id="@+id/imageView9" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView9"
+        android:layout_alignStart="@+id/imageView9"
+        android:layout_below="@+id/imageView9"
+        android:text="道路救援" />
+</RelativeLayout>
+<View
+    android:background="#C0BBB7"
+    android:layout_width="match_parent"
+    android:layout_height="4dp"></View>
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/home_topbom"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"></android.support.v7.widget.RecyclerView>
+    <View
+        android:background="#C0BBB7"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"></View>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_horder2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"></android.support.v7.widget.RecyclerView>
+    <View
+        android:background="#C0BBB7"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"></View>
+    <ListView
+        android:id="@+id/home_listview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"></ListView>
+    <View
+        android:background="#C0BBB7"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"></View>
+    <TextView
+        android:text="热门推荐"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="#C0BBB7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></View>
+    <ListView
+        android:id="@+id/home_listbom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

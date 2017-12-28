@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-  android:id="@+id/top_bei"
-  android:text="北京"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    android:background="#181D23"
+    android:layout_height="50dp">
 
+    <TextView
+        android:textColor="#FAFAFA"
+        android:textSize="26px"
+        android:id="@+id/top_bei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:text="北京" />
+
+    <ImageView
+        android:id="@+id/top_xiajian"
+        android:layout_width="20dp"
+        android:layout_height="7dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/top_bei"
+        android:layout_toRightOf="@+id/top_bei"
+        android:src="@mipmap/topjian" />
+
+    <ImageView
+        android:layout_marginTop="12dp"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/top_bei"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/topbiao" />
+
+    <ImageView
+        android:id="@+id/top_jia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/topjia" />
 </RelativeLayout>
