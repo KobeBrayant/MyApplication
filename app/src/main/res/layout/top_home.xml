@@ -46,15 +46,15 @@
         android:layout_toEndOf="@+id/top_baoyang"
         android:layout_toRightOf="@+id/top_baoyang"
         android:src="@mipmap/dianweixiu"
-        android:id="@+id/imageView" />
+        android:id="@+id/top_weixiu" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/top_weixiu"
+        android:layout_alignRight="@+id/top_weixiu"
+        android:layout_below="@+id/top_weixiu"
         android:text="4S店维修"
         android:id="@+id/textView3" />
 
@@ -67,13 +67,13 @@
         android:layout_toEndOf="@+id/textView3"
         android:layout_toRightOf="@+id/textView3"
         android:src="@mipmap/dianzhanting"
-        android:id="@+id/imageView2" />
+        android:id="@+id/top_zhanshi" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/top_zhanshi"
         android:layout_centerHorizontal="true"
         android:text="4S店展厅"
         android:id="@+id/textView4" />
@@ -87,15 +87,15 @@
         android:layout_toEndOf="@+id/textView4"
         android:layout_toRightOf="@+id/textView4"
         android:src="@mipmap/dianxubao"
-        android:id="@+id/imageView3" />
+        android:id="@+id/top_xubao" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignRight="@+id/imageView3"
-        android:layout_below="@+id/imageView3"
+        android:layout_alignEnd="@+id/top_xubao"
+        android:layout_alignRight="@+id/top_xubao"
+        android:layout_below="@+id/top_xubao"
         android:text="4S店续保"
         android:id="@+id/textView7" />
 
@@ -108,15 +108,15 @@
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
         android:src="@mipmap/dianjingpin"
-        android:id="@+id/imageView4" />
+        android:id="@+id/top_jingpin" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView4"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_below="@+id/imageView4"
+        android:layout_alignLeft="@+id/top_jingpin"
+        android:layout_alignStart="@+id/top_jingpin"
+        android:layout_below="@+id/top_jingpin"
         android:text="4S店精品"
         android:id="@+id/textView8" />
 
@@ -128,26 +128,26 @@
         android:layout_below="@+id/textView2"
         android:layout_marginTop="13dp"
         android:src="@mipmap/xiche"
-        android:id="@+id/imageView5" />
+        android:id="@+id/top_xiche" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView5"
-        android:layout_alignStart="@+id/imageView5"
-        android:layout_below="@+id/imageView5"
+        android:layout_alignLeft="@+id/top_xiche"
+        android:layout_alignStart="@+id/top_xiche"
+        android:layout_below="@+id/top_xiche"
         android:text="   洗车" />
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignLeft="@+id/top_weixiu"
+        android:layout_alignStart="@+id/top_weixiu"
+        android:layout_alignTop="@+id/top_xiche"
         android:src="@mipmap/jingcaihuodong"
-        android:id="@+id/imageView6" />
+        android:id="@+id/top_huodong" />
 
     <TextView
         android:layout_marginTop="5dp"
@@ -155,16 +155,16 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView3"
         android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/imageView6"
+        android:layout_below="@+id/top_huodong"
         android:text="精彩活动" />
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignTop="@+id/top_huodong"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/jifenshangcheng"
-        android:id="@+id/imageView7" />
+        android:id="@+id/top_jifen" />
 
     <TextView
         android:layout_marginTop="5dp"
@@ -172,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
-        android:layout_below="@+id/imageView7"
+        android:layout_below="@+id/top_jifen"
         android:text="精彩活动"
         android:id="@+id/textView6" />
 
@@ -180,10 +180,10 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_above="@+id/textView6"
-        android:layout_alignLeft="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignLeft="@+id/top_xubao"
+        android:layout_alignStart="@+id/top_xubao"
         android:src="@mipmap/weizhangchaxun"
-        android:id="@+id/imageView8" />
+        android:id="@+id/top_weizhang" />
 
     <TextView
         android:layout_marginTop="5dp"
@@ -191,7 +191,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView7"
         android:layout_alignRight="@+id/textView7"
-        android:layout_below="@+id/imageView8"
+        android:layout_below="@+id/top_weizhang"
         android:text="违章查询" />
 
     <ImageView
@@ -199,17 +199,17 @@
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/textView8"
         android:layout_alignStart="@+id/textView8"
-        android:layout_alignTop="@+id/imageView8"
+        android:layout_alignTop="@+id/top_weizhang"
         android:src="@mipmap/daolujiuyuan"
-        android:id="@+id/imageView9" />
+        android:id="@+id/top_jiuyuan" />
 
     <TextView
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView9"
-        android:layout_alignStart="@+id/imageView9"
-        android:layout_below="@+id/imageView9"
+        android:layout_alignLeft="@+id/top_jiuyuan"
+        android:layout_alignStart="@+id/top_jiuyuan"
+        android:layout_below="@+id/top_jiuyuan"
         android:text="道路救援" />
 </RelativeLayout>
 <View
@@ -221,8 +221,8 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"></android.support.v7.widget.RecyclerView>
     <View
-        android:background="#C0BBB7"
-        android:layout_width="match_parent"
+            android:background="#C0BBB7"
+          android:layout_width="match_parent"
         android:layout_height="4dp"></View>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/home_horder2"

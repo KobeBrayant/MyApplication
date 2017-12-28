@@ -39,7 +39,7 @@ import static android.app.Activity.RESULT_OK;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends BaseFragMent {
+public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     private static final int REQUEST_CODE_PICK_CITY = 233;
     private ImageView top_xiajian;
     private TextView top_bei;
@@ -51,6 +51,16 @@ public class HomeFragment extends BaseFragMent {
     String TU_PIAN = "http://39.106.173.47:8080/saas-img";
     private Banner banner;
     private ArrayList<String > bannerlist =null;
+    private ImageView top_baoyang;
+    private ImageView top_weixiu;
+    private ImageView top_zhanshi;
+    private ImageView top_xubao;
+    private ImageView top_jingpin;
+    private ImageView top_xiche;
+    private ImageView top_huodong;
+    private ImageView top_jifen;
+    private ImageView top_weizhang;
+    private ImageView top_jiuyuan;
 
     @Override
     protected int getLayoutId() {
@@ -63,10 +73,32 @@ public class HomeFragment extends BaseFragMent {
         top_bei = (TextView) view.findViewById(R.id.top_bei);
        pullListView =  (PullToRefreshListView) view.findViewById(R.id.mVideoListView);
        inittop();
+
     }
     private void inittop() {
         top = View.inflate(getActivity(), R.layout.top_home, null);
        banner = (Banner) top.findViewById(R.id.home_banner);
+        top_baoyang =  (ImageView)   top.findViewById(R.id.top_baoyang);
+        top_weixiu =  (ImageView)   top.findViewById(R.id.top_weixiu);
+        top_zhanshi =  (ImageView)  top.findViewById(R.id.top_zhanshi);
+        top_xubao =  (ImageView)  top.findViewById(R.id.top_xubao);
+        top_jingpin =  (ImageView)   top.findViewById(R.id.top_jingpin);
+        top_xiche =  (ImageView)  top.findViewById(R.id.top_xiche);
+        top_huodong =  (ImageView)  top.findViewById(R.id.top_huodong);
+        top_jifen =  (ImageView)  top.findViewById(R.id.top_jifen);
+        top_weizhang =  (ImageView)  top.findViewById(R.id.top_weizhang);
+        top_jiuyuan =  (ImageView)  top.findViewById(R.id.top_jiuyuan);
+
+        top_baoyang.setOnClickListener(this);
+        top_weixiu.setOnClickListener(this);
+                top_zhanshi.setOnClickListener(this);
+        top_xubao.setOnClickListener(this);
+        top_jingpin.setOnClickListener(this);
+        top_xiche.setOnClickListener(this);
+        top_huodong.setOnClickListener(this);
+        top_jifen.setOnClickListener(this);
+        top_weizhang.setOnClickListener(this);
+        top_jiuyuan.setOnClickListener(this);
         initbanner();
     }
     private void initbanner() {
@@ -126,6 +158,7 @@ public class HomeFragment extends BaseFragMent {
 
     @Override
     protected void loadData() {
+        //  头布局
         ListView refreshableView = pullListView.getRefreshableView();
         refreshableView.addHeaderView(top);
         top_bei.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +179,27 @@ public class HomeFragment extends BaseFragMent {
             }
         }
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            //保养
+            case R.id.top_baoyang :
+                break;
+                //维修
+            case  R.id.top_weixiu:
+                break;
+                //展示
+            case  R.id.top_zhanshi:
+                break;
+            //续保
+            case  R.id.top_xubao:
+                break;
+
+
+        }
+    }
+
     public class GlideImage extends ImageLoader {
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
