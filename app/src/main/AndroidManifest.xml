@@ -31,6 +31,10 @@
             android:theme="@style/CityPicker.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".city.CitiActivity"></activity>
+
+        <activity android:name=".ui.homeframent.qrcode.EWMActivity"/>
+        <activity android:name=".ui.homeframent.qrcode.SYSActivity"/>
+
     </application>
 
 </manifest>

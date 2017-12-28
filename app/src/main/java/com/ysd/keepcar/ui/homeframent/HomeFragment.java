@@ -1,13 +1,22 @@
 package com.ysd.keepcar.ui.homeframent;
 
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -20,6 +29,8 @@ import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.homeframent.baner.BannerBean;
 import com.ysd.keepcar.ui.homeframent.baner.Horbean;
+import com.ysd.keepcar.ui.homeframent.qrcode.EWMActivity;
+import com.ysd.keepcar.ui.homeframent.qrcode.SYSActivity;
 import com.zaaach.citypicker.CityPickerActivity;
 
 import java.io.IOException;
@@ -61,6 +72,9 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     private ImageView top_jifen;
     private ImageView top_weizhang;
     private ImageView top_jiuyuan;
+    private ImageView top_jia;
+    private RelativeLayout viewById;
+    private PopupWindow window;
 
     @Override
     protected int getLayoutId() {
@@ -69,9 +83,11 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
     @Override
     protected void init(View view) {
+        viewById = view.findViewById(R.id.My_Title);
         top_xiajian = (ImageView) view.findViewById(R.id.top_xiajian);
         top_bei = (TextView) view.findViewById(R.id.top_bei);
-       pullListView =  (PullToRefreshListView) view.findViewById(R.id.mVideoListView);
+        top_jia = view.findViewById(R.id.top_jia);
+        pullListView =  (PullToRefreshListView) view.findViewById(R.id.mVideoListView);
        inittop();
 
     }
@@ -156,11 +172,21 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
     }
 
+
+
     @Override
     protected void loadData() {
         //  头布局
         ListView refreshableView = pullListView.getRefreshableView();
         refreshableView.addHeaderView(top);
+        top_jia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                but(viewById);
+
+            }
+        });
         top_bei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -207,4 +233,61 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         }
 
     }
+    public void but(View v) {
+
+        View view = View.inflate(getActivity(), R.layout.menu_item, null);
+        TextView myRWM = view.findViewById(R.id.My_EWM);
+        TextView mySYS = view.findViewById(R.id.My_SYS);
+        window = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT,
+                android.support.v4.view.ViewPager.LayoutParams.WRAP_CONTENT,
+                true);
+        ColorDrawable cd = new ColorDrawable(0x000000);
+        // 弹出框 默认弹出之后不能关闭 这里设置一个背景就可以关了
+        window.setBackgroundDrawable(cd);
+        window.setFocusable(true);
+        //设置popupwindow外的的区域可点击
+        window.setOutsideTouchable(true);
+//设置popupwindow获得焦点
+        WindowManager.LayoutParams lp=getActivity().getWindow().getAttributes();
+        lp.alpha = 0.4f;
+        getActivity().getWindow().setAttributes(lp);
+		/*
+		 * 第一个参数： 要加载的布局 第二个参数： 这个弹出框的宽 第三个参数： 这个弹出框的高 第四个参数： boolean类型 默认是false
+		 * 如果传入true 代表当前弹出框获取了焦点 也就是可以点击
+		 */
+
+        // showAsDropDown(View anchor)：相对某个控件的位置，无偏移
+       // 这个v其实代表的就是这个按钮
+//        window.showAsDropDown(v);
+
+       // showAtLocation(View parent, int gravity, int x, int y)：相对于父控件的位置
+        window.showAtLocation(v, Gravity.RIGHT, 0, -730);
+        myRWM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(),EWMActivity.class));
+                window.dismiss();
+            }
+        });
+        mySYS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(),SYSActivity.class));
+                window.dismiss();
+            }
+        });
+        window.setOnDismissListener(new PopupWindow.OnDismissListener(){
+
+            //在dismiss中恢复透明度
+            public void onDismiss(){
+                WindowManager.LayoutParams lp=getActivity().getWindow().getAttributes();
+                lp.alpha = 1f;
+                getActivity().getWindow().setAttributes(lp);
+
+            }
+        });
+
+    }
+
+
 }

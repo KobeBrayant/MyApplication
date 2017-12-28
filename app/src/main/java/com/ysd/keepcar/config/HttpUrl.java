@@ -5,7 +5,9 @@ package com.ysd.keepcar.config;
  */
 
 public class HttpUrl {
+    //服务器
     public static  final String  BASEURL="http://39.106.173.47:8080/app/";
+    //图片服务器地址
     public static  final String  IMGBASE="http://39.106.173.47:8080/saas-img/";
 
 
