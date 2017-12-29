@@ -7,15 +7,13 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -62,16 +60,17 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     String TU_PIAN = "http://39.106.173.47:8080/saas-img";
     private Banner banner;
     private ArrayList<String > bannerlist =null;
-    private ImageView top_baoyang;
-    private ImageView top_weixiu;
-    private ImageView top_zhanshi;
-    private ImageView top_xubao;
-    private ImageView top_jingpin;
-    private ImageView top_xiche;
-    private ImageView top_huodong;
-    private ImageView top_jifen;
-    private ImageView top_weizhang;
-    private ImageView top_jiuyuan;
+
+    private RadioButton top_baoyang;
+    private RadioButton top_weixiu;
+    private RadioButton top_zhanshi;
+    private RadioButton top_xubao;
+    private RadioButton top_jingpin;
+    private RadioButton top_xiche;
+    private RadioButton top_huodong;
+    private RadioButton top_jifen;
+    private RadioButton top_weizhang;
+    private RadioButton top_jiuyuan;
     private ImageView top_jia;
     private RelativeLayout viewById;
     private PopupWindow window;
@@ -86,7 +85,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         viewById = view.findViewById(R.id.My_Title);
         top_xiajian = (ImageView) view.findViewById(R.id.top_xiajian);
         top_bei = (TextView) view.findViewById(R.id.top_bei);
-        top_jia = view.findViewById(R.id.top_jia);
+        top_jia = (ImageView) view.findViewById(R.id.top_jia);
         pullListView =  (PullToRefreshListView) view.findViewById(R.id.mVideoListView);
        inittop();
 
@@ -94,17 +93,16 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     private void inittop() {
         top = View.inflate(getActivity(), R.layout.top_home, null);
        banner = (Banner) top.findViewById(R.id.home_banner);
-        top_baoyang =  (ImageView)   top.findViewById(R.id.top_baoyang);
-        top_weixiu =  (ImageView)   top.findViewById(R.id.top_weixiu);
-        top_zhanshi =  (ImageView)  top.findViewById(R.id.top_zhanshi);
-        top_xubao =  (ImageView)  top.findViewById(R.id.top_xubao);
-        top_jingpin =  (ImageView)   top.findViewById(R.id.top_jingpin);
-        top_xiche =  (ImageView)  top.findViewById(R.id.top_xiche);
-        top_huodong =  (ImageView)  top.findViewById(R.id.top_huodong);
-        top_jifen =  (ImageView)  top.findViewById(R.id.top_jifen);
-        top_weizhang =  (ImageView)  top.findViewById(R.id.top_weizhang);
-        top_jiuyuan =  (ImageView)  top.findViewById(R.id.top_jiuyuan);
-
+        top_baoyang =  (RadioButton)   top.findViewById(R.id.top_baoyang);
+        top_weixiu =  (RadioButton)   top.findViewById(R.id.top_weixiu);
+        top_zhanshi =  (RadioButton)  top.findViewById(R.id.top_zhanshi);
+        top_xubao =  (RadioButton)  top.findViewById(R.id.top_xubao);
+        top_jingpin =  (RadioButton)   top.findViewById(R.id.top_jingpin);
+        top_xiche =  (RadioButton)  top.findViewById(R.id.top_xiche);
+        top_huodong =  (RadioButton)  top.findViewById(R.id.top_huodong);
+        top_jifen =  (RadioButton)  top.findViewById(R.id.top_jifen);
+        top_weizhang =  (RadioButton)  top.findViewById(R.id.top_weizhang);
+        top_jiuyuan =  (RadioButton)  top.findViewById(R.id.top_jiuyuan);
         top_baoyang.setOnClickListener(this);
         top_weixiu.setOnClickListener(this);
                 top_zhanshi.setOnClickListener(this);
@@ -116,6 +114,8 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         top_weizhang.setOnClickListener(this);
         top_jiuyuan.setOnClickListener(this);
         initbanner();
+
+
     }
     private void initbanner() {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -132,7 +132,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.e("TAG", "错误：" + e.toString());
+                Log.e("TAG", "错误：" + e.getMessage());
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
@@ -148,7 +148,6 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
                         banner.setImageLoader(new GlideImage());
                         bannerlist = new ArrayList<>();
                         bannerlist.clear();
-
                         for (int i = 0; i < shopList.size(); i++) {
                             s = shopList.get(i);
                             bannerlist.add(TU_PIAN + s);
@@ -179,6 +178,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         //  头布局
         ListView refreshableView = pullListView.getRefreshableView();
         refreshableView.addHeaderView(top);
+        refreshableView.setAdapter(null);
         top_jia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -221,8 +221,24 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
             //续保
             case  R.id.top_xubao:
                 break;
-
-
+            //精品
+            case  R.id.top_jingpin:
+                break;
+            //洗车
+            case  R.id.top_xiche:
+                break;
+            //活动
+            case  R.id.top_huodong:
+                break;
+            //积分
+            case  R.id.top_jifen:
+                break;
+            //违章
+            case  R.id.top_weizhang:
+                break;
+            //救援
+            case  R.id.top_jiuyuan:
+                break;
         }
     }
 
