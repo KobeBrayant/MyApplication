@@ -2,12 +2,15 @@ package com.ysd.keepcar.ui.prisonframents;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.nfc.Tag;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,31 +21,20 @@ import android.widget.PopupWindow;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+import com.ysd.keepcar.ui.LoginActivity;
 import com.ysd.keepcar.ui.MainActivity;
+
+import static android.content.ContentValues.TAG;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProsionFraments extends BaseFragMent {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.prosion_fragmentl;
-    }
-
-    @Override
-    protected void init(View view) {
-
-    }
-
-    @Override
-    protected void loadData() {
-
-    }
-
-/*
-   // private ImageView loginpop;
     private PopupWindow mPopWindow;
+    private ImageView menu_login;
+    private View inflate;
+    private ImageView icon_login;
 
     @Override
     protected int getLayoutId() {
@@ -51,43 +43,41 @@ public class ProsionFraments extends BaseFragMent {
 
     @Override
     protected void init(View view) {
-        //loginpop = view.findViewById(R.id.loginpop);
+        menu_login = view.findViewById(R.id.menu_login);
+        icon_login = view.findViewById(R.id.icon_login);
+        inflate = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
+
     }
 
     @Override
     protected void loadData() {
-       *//* loginpop.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        menu_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
                 showPopWindow(inflate);
             }
-        });*//*
+        });
+        icon_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG,"======");
+                Intent intent=new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
- *//*   @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void showPopWindow() {
-        View contentView = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
-        mPopWindow = new PopupWindow(contentView);
-        mPopWindow.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
-        mPopWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_prosion_framents, null);
-        View viewById = inflate.findViewById(R.id.loginpop);
-        //mPopWindow.showAtLocation(inflate,Gravity.AXIS_PULL_BEFORE,0,0);
-        mPopWindow.showAsDropDown(inflate);
-    }*//*
  private void showPopWindow(View view) {
      try {
 
-         mPopWindow = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT,
-                 ViewGroup.LayoutParams.WRAP_CONTENT);
+         mPopWindow = new PopupWindow(view,200,
+                250);
          mPopWindow.setFocusable(true);
          mPopWindow.setOutsideTouchable(true);
          ColorDrawable cd = new ColorDrawable(0x00ffffff);// 背景颜色全透明
          mPopWindow.setBackgroundDrawable(cd);
          mPopWindow.setAnimationStyle(R.style.style_pop_animation);// 动画效果必须放在showAsDropDown()方法上边，否则无效
-        //mPopWindow.showAsDropDown(loginpop,0,10);
+        mPopWindow.showAsDropDown(menu_login,0,10);
 
          mPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
 
@@ -109,5 +99,5 @@ public class ProsionFraments extends BaseFragMent {
         WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
         lp.alpha = bgAlpha;// 0.0-1.0
         getActivity().getWindow().setAttributes(lp);
-    }*/
+    }
 }

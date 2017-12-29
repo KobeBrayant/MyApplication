@@ -305,5 +305,9 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
     }
 
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        bannerlist.clear();
+    }
 }
