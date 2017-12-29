@@ -2,6 +2,7 @@ package com.ysd.keepcar.base;
 
 
 import com.ysd.keepcar.net.HttpFactroy;
+import com.ysd.keepcar.utils.OkhttpUtils;
 
 import okhttp3.OkHttpClient;
 
@@ -10,5 +11,5 @@ import okhttp3.OkHttpClient;
  */
 
 public interface BaseModelI {
-    public static OkHttpClient iHttp = HttpFactroy.create();
+    public static OkhttpUtils iHttp = HttpFactroy.create();
 }

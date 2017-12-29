@@ -19,6 +19,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
         setContentView(getLayoutId());
         AppUtils.context=this;
         initView();
+        initData();
     }
     protected abstract int getLayoutId();
     protected abstract void initView();

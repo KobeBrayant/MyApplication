@@ -118,6 +118,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
     }
     private void initbanner() {
+        shopList.clear();
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), "");
         Request request = new Request.Builder()

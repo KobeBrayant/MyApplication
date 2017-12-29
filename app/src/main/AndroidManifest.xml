@@ -37,7 +37,7 @@
         <activity android:name=".city.CitiActivity" />
         <activity android:name=".ui.homeframent.qrcode.EWMActivity" />
         <activity android:name=".ui.homeframent.qrcode.SYSActivity" />
-        <activity android:name=".ui.LoginActivity"></activity>
+        <activity android:name=".ui.loginmodoule.LoginActivity"></activity>
     </application>
 
 </manifest>

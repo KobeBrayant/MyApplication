@@ -25,7 +25,7 @@
         android:layout_below="@+id/imageView"
         android:layout_marginLeft="40px"
         android:layout_marginRight="40px"
-        android:layout_marginTop="113px"
+        android:layout_marginTop="170px"
         android:background="#00000000"
         tools:ignore="RtlCompat">
 
@@ -33,7 +33,7 @@
             android:drawableLeft="@drawable/mobile_phone_no"
             android:id="@+id/edt_user_phone"
             android:layout_width="match_parent"
-            android:layout_height="80px"
+            android:layout_height="100px"
             android:textSize="26sp"
             android:maxLength="11"
             android:background="@drawable/rounded_edittext" />
@@ -65,11 +65,11 @@
         android:layout_width="400px"
         android:layout_height="90px"
         android:text="立即登录"
-        android:background="#ee8d18"
+        android:background="@drawable/btn_shape"
         android:layout_below="@+id/verification_code_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
-        android:id="@+id/button" />
+        android:id="@+id/login_button" />
 
     <TextView
         android:layout_centerVertical="true"
@@ -77,11 +77,11 @@
         android:layout_centerInParent="true"
         android:text="获取验证码"
         android:gravity="center_vertical|center_horizontal"
-        android:background="#9a9e9b"
+        android:background="@drawable/txt_shape"
         android:textSize="15sp"
         android:textColor="#fcfcfc"
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="80px"
         android:layout_alignEnd="@+id/verification_code_layout"
         android:layout_alignRight="@+id/verification_code_layout"
         android:layout_alignTop="@+id/verification_code_layout" />

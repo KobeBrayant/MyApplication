@@ -10,7 +10,7 @@ import okhttp3.OkHttpClient;
  */
 
 public class HttpFactroy {
-    public static OkHttpClient create(){
+    public static OkhttpUtils create(){
         return OkhttpUtils.newInstance();
     }
 }

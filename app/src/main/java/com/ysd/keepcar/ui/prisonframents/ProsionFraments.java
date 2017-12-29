@@ -1,28 +1,19 @@
 package com.ysd.keepcar.ui.prisonframents;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
-import android.nfc.Tag;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
-import com.ysd.keepcar.ui.LoginActivity;
-import com.ysd.keepcar.ui.MainActivity;
+import com.ysd.keepcar.ui.loginmodoule.LoginActivity;
 
 import static android.content.ContentValues.TAG;
 

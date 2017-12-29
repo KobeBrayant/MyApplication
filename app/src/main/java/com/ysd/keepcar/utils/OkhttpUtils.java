@@ -24,7 +24,7 @@ public class OkhttpUtils {
     }
 
     //3.提供公有方法供其他类访问获取本类对象
-    public static OkHttpClient newInstance() {
+    public static OkhttpUtils newInstance() {
         if (null == okHttpUtil) {
             synchronized (OkhttpUtils.class) {
                 if (null == okHttpUtil) {
@@ -32,7 +32,7 @@ public class OkhttpUtils {
                 }
             }
         }
-        return okHttpClient;
+        return okHttpUtil;
     }
     public Call doPost(String url, RequestBody requestBody){
         Request.Builder request = new Request.Builder();
