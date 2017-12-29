@@ -138,7 +138,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
             public void onResponse(Call call, Response response) throws IOException {
                 string1 = response.body().string();
            bean = new Gson().fromJson(string1, BannerBean.class);
-                Log.e("TAG", "成功：" + string1);
+                Log.e("TAG", "成功==：" + string1);
                getActivity().runOnUiThread(new Runnable() {
                     private String s;
                     @Override

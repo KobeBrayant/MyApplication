@@ -42,36 +42,29 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
     protected void initView() {
         frameLayout = (FrameLayout) findViewById(R.id.framelayout);
         radioGroup = (RadioGroup) findViewById(R.id.mBottomGroup);
-
         //找到四个按钮
         button_1 = (RadioButton) findViewById(R.id.my_home);
         button_2 = (RadioButton) findViewById(R.id.my_fors);
         button_3 = (RadioButton) findViewById(R.id.my_shoping);
         button_4 = (RadioButton) findViewById(R.id.my_myprison);
-
         //创建Fragment对象及集合
         fragment_1 = new HomeFragment();
         fragment_2 = new ForSFragment();
         fragment_3 = new ShopFraments();
         fragment_4 = new ProsionFraments();
-
         //将Fragment对象添加到list中
         list = new ArrayList<>();
         list.add(fragment_1);
         list.add(fragment_2);
         list.add(fragment_3);
         list.add(fragment_4);
-
         //设置RadioGroup开始时设置的按钮，设置第一个按钮为默认值
         radioGroup.check(R.id.my_home);
-
-
         //设置按钮点击监听
         button_1.setOnClickListener(this);
         button_2.setOnClickListener(this);
         button_3.setOnClickListener(this);
         button_4.setOnClickListener(this);
-
         //初始时向容器中添加第一个Fragment对象
         addFragment(fragment_1);
     }
