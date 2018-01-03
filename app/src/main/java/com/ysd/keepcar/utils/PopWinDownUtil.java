@@ -32,8 +32,9 @@ public class PopWinDownUtil {
         //动画效果
         popupWindow.setAnimationStyle(R.style.AnimationTopFade);
         //菜单背景色
-        ColorDrawable dw = new ColorDrawable(Color.TRANSPARENT);
+        ColorDrawable dw = new ColorDrawable(0x000000);
         popupWindow.setBackgroundDrawable(dw);
+
         popupWindow.setOutsideTouchable(true);
         //关闭事件
         popupWindow.setSoftInputMode(PopupWindow.INPUT_METHOD_NEEDED);

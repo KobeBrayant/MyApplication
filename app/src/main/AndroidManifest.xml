@@ -38,6 +38,14 @@
         <activity android:name=".ui.homeframent.qrcode.EWMActivity" />
         <activity android:name=".ui.homeframent.qrcode.SYSActivity" />
         <activity android:name=".ui.loginmodoule.LoginActivity" />
+        <activity android:name=".ui.WonderfulActivities">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
         <meta-data
             android:name="com.amap.api.v2.apikey"

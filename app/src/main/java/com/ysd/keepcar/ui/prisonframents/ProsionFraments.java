@@ -10,10 +10,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.loginmodoule.LoginActivity;
+import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
 import static android.content.ContentValues.TAG;
 
@@ -26,6 +28,7 @@ public class ProsionFraments extends BaseFragMent {
     private ImageView menu_login;
     private View inflate;
     private ImageView icon_login;
+    private TextView loginName;
 
     @Override
     protected int getLayoutId() {
@@ -36,6 +39,8 @@ public class ProsionFraments extends BaseFragMent {
     protected void init(View view) {
         menu_login = view.findViewById(R.id.menu_login);
         icon_login = view.findViewById(R.id.icon_login);
+        loginName = view.findViewById(R.id.name_login);
+
         inflate = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
 
     }
@@ -51,7 +56,7 @@ public class ProsionFraments extends BaseFragMent {
         icon_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e(TAG,"======");
+
                 Intent intent=new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
@@ -68,7 +73,7 @@ public class ProsionFraments extends BaseFragMent {
          ColorDrawable cd = new ColorDrawable(0x00ffffff);// 背景颜色全透明
          mPopWindow.setBackgroundDrawable(cd);
          mPopWindow.setAnimationStyle(R.style.style_pop_animation);// 动画效果必须放在showAsDropDown()方法上边，否则无效
-        mPopWindow.showAsDropDown(menu_login,0,10);
+         mPopWindow.showAsDropDown(menu_login,0,10);
 
          mPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
 
@@ -90,5 +95,12 @@ public class ProsionFraments extends BaseFragMent {
         WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
         lp.alpha = bgAlpha;// 0.0-1.0
         getActivity().getWindow().setAttributes(lp);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String userphone = (String) SharedPreferencesUtils.getParam(getActivity(), "userphone", "");
+        loginName.setText(userphone);
     }
 }

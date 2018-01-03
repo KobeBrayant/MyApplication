@@ -27,5 +27,4 @@
         <item name="android:windowEnterAnimation">@anim/dropdown_in</item>
         <item name="android:windowExitAnimation">@anim/dropdown_out</item>
     </style>
-
 </resources>

@@ -11,6 +11,8 @@
     <color name="colorGreyLight">#CCCCCC</color>
     <color name="colorGreyDark">#999999</color>
 
+    <color name="hui">#999</color>
+
     <!-- 列表分割线   色值#999999 -->
     <color name="list_divider">#999999</color>
     <!-- 选中态色块   色值#D7D7D7 -->

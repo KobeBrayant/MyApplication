@@ -26,6 +26,7 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+import com.ysd.keepcar.ui.WonderfulActivities;
 import com.ysd.keepcar.ui.homeframent.baner.BannerBean;
 import com.ysd.keepcar.ui.homeframent.baner.HomeBean;
 import com.ysd.keepcar.ui.homeframent.baner.HomeDapter;
@@ -291,7 +292,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
             @Override
             public void onClick(View view) {
 
-                but(viewById);
+                but(view);
 
             }
         });
@@ -350,6 +351,7 @@ startActivity(new Intent(getActivity(), XiCarActivity.class));
                 break;
             //活动
             case  R.id.top_huodong:
+                startActivity(new Intent(getActivity(),WonderfulActivities.class));
                 break;
             //积分
             case  R.id.top_jifen:
@@ -390,9 +392,9 @@ startActivity(new Intent(getActivity(), XiCarActivity.class));
         window = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT,
                 android.support.v4.view.ViewPager.LayoutParams.WRAP_CONTENT,
                 true);
-        ColorDrawable cd = new ColorDrawable(0x000000);
+//        ColorDrawable cd = new ColorDrawable(0x000000);
         // 弹出框 默认弹出之后不能关闭 这里设置一个背景就可以关了
-        window.setBackgroundDrawable(cd);
+        window.setBackgroundDrawable(getResources().getDrawable(R.mipmap.erweima));
         window.setFocusable(true);
         //设置popupwindow外的的区域可点击
         window.setOutsideTouchable(true);
@@ -407,10 +409,10 @@ startActivity(new Intent(getActivity(), XiCarActivity.class));
 
         // showAsDropDown(View anchor)：相对某个控件的位置，无偏移
        // 这个v其实代表的就是这个按钮
-//        window.showAsDropDown(v);
+        window.showAsDropDown(v);
 
        // showAtLocation(View parent, int gravity, int x, int y)：相对于父控件的位置
-        window.showAtLocation(v, Gravity.RIGHT, 0, -730);
+//        window.showAtLocation(v, Gravity.RIGHT, 0, -730);
         myRWM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

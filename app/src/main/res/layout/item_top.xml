@@ -29,10 +29,9 @@
         android:src="@mipmap/topjian" />
 
     <ImageView
-        android:layout_marginTop="12dp"
         android:layout_width="75dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/top_bei"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/topbiao" />
 

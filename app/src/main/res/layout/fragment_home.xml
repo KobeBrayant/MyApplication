@@ -8,6 +8,7 @@
 
     <include layout="@layout/item_top"></include>
 
+
  <ListView
     android:id="@+id/mVideoListView"
     android:layout_width="match_parent"

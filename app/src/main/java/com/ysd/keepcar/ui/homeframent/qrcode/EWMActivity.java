@@ -14,6 +14,7 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.ysd.keepcar.R;
+import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -38,7 +39,8 @@ public class EWMActivity extends Activity {
         card.add("4S");
         card.add("***");
         card.add("4S 养车");
-        card.add("邮箱_NO");
+        String userphone = (String) SharedPreferencesUtils.getParam(EWMActivity.this, "userphone", "");
+        card.add("手机_"+userphone);
         card.add("北京朝阳");
         qrcode(view);
         userName.setText(card.get(0));
