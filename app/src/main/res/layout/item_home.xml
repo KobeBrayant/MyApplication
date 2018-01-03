@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:src="@mipmap/ic_launcher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_tou" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  android:id="@+id/item_xiche1"
+        android:layout_toLeftOf="@+id/item_name"
+        android:layout_toStartOf="@+id/item_name"
+        android:src="@mipmap/xiche1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/item_tou"
+        android:layout_toRightOf="@+id/item_tou"
+        android:text="精品"
+        android:textSize="15dp"
+        android:id="@+id/item_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_name"
+        android:layout_alignStart="@+id/item_name"
+        android:layout_below="@+id/item_name"
+        android:text="普利公司通泰泰然店铺"
+        android:id="@+id/item_gongsi" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/item_fukuan"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/item_tou"-->
+        <!--android:layout_alignLeft="@+id/item_name"-->
+        <!--android:layout_alignStart="@+id/item_name"-->
+        <!--android:text="639人付款" />-->
+
+    <TextView
+        android:id="@+id/item_qian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/item_fukuan"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:text="￥369"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        tools:ignore="UnknownId" />
+
+
+
+</RelativeLayout>

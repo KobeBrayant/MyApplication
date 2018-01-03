@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.ysd.keepcar.ui.shopingframents.activity.ShowzhiActivity">
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginLeft="15px"-->
+        <!--android:layout_marginStart="15px"-->
+        <!--android:text="收货人："-->
+        <!--android:textSize="20sp"-->
+        <!--android:id="@+id/textView3" />-->
+
+    <!--<TextView-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toEndOf="@+id/textView3"-->
+        <!--android:layout_toRightOf="@+id/textView3"-->
+        <!--android:text="张三" />-->
+
+    <!--<TextView-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginEnd="14px"-->
+        <!--android:layout_marginRight="14px"-->
+        <!--android:text="1359461646131" />-->
+<!--</RelativeLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+<!--<TextView-->
+    <!--android:textColor="#BBBBBB"-->
+    <!--android:text="收货地址："-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+<!--<TextView-->
+    <!--android:textColor="#BBBBBB"-->
+    <!--android:text="北京市昌平区高碑店华膳园五楼116室"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--</LinearLayout>-->
+    <!--<View-->
+        <!--android:layout_marginTop="10px"-->
+        <!--android:background="#D4D4D4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20px"></View>-->
+    <!--<TextView-->
+        <!--android:layout_marginTop="25px"-->
+        <!--android:textSize="25sp"-->
+        <!--android:text="普利司通泰然者旗舰店"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<view-->
+        <!--android:background="#D4D4D4"-->
+        <!--android:layout_marginTop="25px"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="4px"></view>-->
+</com.zhy.autolayout.AutoLinearLayout>

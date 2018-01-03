@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<ImageView
+    android:scaleType="fitXY"
+    android:src="@mipmap/ic_launcher"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:id="@+id/imageView2" />
+
+    <TextView
+
+        android:layout_marginLeft="20dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView2"
+        android:text="定值卷"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageView5" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:text="惠尔普斯大公司"
+        android:id="@+id/jifen_gongsi" />
+
+    <ImageView
+
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:src="@mipmap/jifen" />
+
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/jifen_gongsi"
+        android:layout_alignStart="@+id/jifen_gongsi"
+        android:layout_below="@+id/jifen_gongsi"
+        android:text="200"
+        android:textColor="#FF0000"
+        android:id="@+id/textView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
+        android:text="已兑200" />
+</RelativeLayout>

@@ -1,12 +1,13 @@
 package com.ysd.keepcar.ui.homeframent;
 
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,19 +17,25 @@ import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.homeframent.baner.BannerBean;
+import com.ysd.keepcar.ui.homeframent.baner.HomeBean;
+import com.ysd.keepcar.ui.homeframent.baner.HomeDapter;
 import com.ysd.keepcar.ui.homeframent.baner.Horbean;
+import com.ysd.keepcar.ui.homeframent.jingpin.JingpinActivity;
 import com.ysd.keepcar.ui.homeframent.qrcode.EWMActivity;
 import com.ysd.keepcar.ui.homeframent.qrcode.SYSActivity;
+import com.ysd.keepcar.ui.jifen.JifenActivity;
+import com.ysd.keepcar.ui.shopingframents.ShopFraments;
+import com.ysd.keepcar.ui.xiche.XiCarActivity;
 import com.zaaach.citypicker.CityPickerActivity;
 
 import java.io.IOException;
@@ -52,7 +59,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     private static final int REQUEST_CODE_PICK_CITY = 233;
     private ImageView top_xiajian;
     private TextView top_bei;
-    private PullToRefreshListView pullListView;
+    private ListView pullListView;
     private View top;
     private List<Horbean> mhorbean;
     List<String> shopList = new ArrayList<>();
@@ -74,7 +81,14 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     private ImageView top_jia;
     private RelativeLayout viewById;
     private PopupWindow window;
-
+    private ViewFlipper flipper;
+    private List<String> testList;
+    private int count;
+    private int mItemCount = 9;
+    private View bomm;
+    private SwipeRefreshLayout swip;
+    private ListView home_list;
+  private  List<HomeBean> mlist = new ArrayList<>();
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_home;
@@ -86,13 +100,51 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         top_xiajian = (ImageView) view.findViewById(R.id.top_xiajian);
         top_bei = (TextView) view.findViewById(R.id.top_bei);
         top_jia = (ImageView) view.findViewById(R.id.top_jia);
-        pullListView =  (PullToRefreshListView) view.findViewById(R.id.mVideoListView);
+        pullListView =  (ListView) view.findViewById(R.id.mVideoListView);
        inittop();
-
+//        pullListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
+//            @Override
+//            public void onRefresh(PullToRefreshBase<ListView> pullToRefreshBase) {
+//                String label = DateUtils.formatDateTime(
+//                       getContext(),
+//                        System.currentTimeMillis(),
+//                        DateUtils.FORMAT_SHOW_TIME
+//                                | DateUtils.FORMAT_SHOW_DATE
+//                                | DateUtils.FORMAT_ABBREV_ALL);
+//                // 显示最后更新的时间
+//                pullListView.getLoadingLayoutProxy()
+//                        .setLastUpdatedLabel(label);
+//
+//                // 模拟加载任务
+//                new GetDataTask().execute();
+//            }
+//        });
+//
+//    }
+//    private class GetDataTask extends AsyncTask<Void, Void, String> {
+//
+//        @Override
+//        protected String doInBackground(Void... params) {
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//            }
+//            return "" + (mItemCount++);
+//        }
+//        @Override
+//        protected void onPostExecute(String result)
+//        {
+//           // mAdapter.notifyDataSetChanged();
+//            // Call onRefreshComplete when the list has been refreshed.
+//            pullListView.onRefreshComplete();
+//        }
     }
-    private void inittop() {
+        private void inittop() {
         top = View.inflate(getActivity(), R.layout.top_home, null);
+        bomm = View.inflate(getActivity(), R.layout.top_bomm, null);
+            initboom();
        banner = (Banner) top.findViewById(R.id.home_banner);
+         //   swip =  (SwipeRefreshLayout)top.findViewById(R.id.swip);
         top_baoyang =  (RadioButton)   top.findViewById(R.id.top_baoyang);
         top_weixiu =  (RadioButton)   top.findViewById(R.id.top_weixiu);
         top_zhanshi =  (RadioButton)  top.findViewById(R.id.top_zhanshi);
@@ -103,6 +155,45 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         top_jifen =  (RadioButton)  top.findViewById(R.id.top_jifen);
         top_weizhang =  (RadioButton)  top.findViewById(R.id.top_weizhang);
         top_jiuyuan =  (RadioButton)  top.findViewById(R.id.top_jiuyuan);
+//            swip.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//                @Override
+//                public void onRefresh() {
+//                    new Handler().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            // TODO Auto-generated method stub
+//                            swip.setRefreshing(false);
+//                        }
+//                    }, 3000);
+//                }
+//            });
+        flipper = (ViewFlipper) top.findViewById(R.id.flipper);
+        testList = new ArrayList();
+        testList.add(0, "坐在里面是件美事，被人们看见坐在其中更是快事。");
+        testList.add(1, "该车外型一直维持不变，所以外型上很丑陋，但其性能一直在改进。");
+        testList.add(2, "车到山前必有路，有路必有丰田车 更远更自由");
+        testList.add(3, "激活新力量新雅阁新力量新登场");
+        testList.add(4, "和谐灵动，君子风范和谐生活新成员");
+        count = testList.size();
+        for (int i = 0; i < count; i++) {
+            final View ll_content = View.inflate(getActivity(), R.layout.item_flipper, null);
+            TextView tv_content = (TextView) ll_content.findViewById(R.id.tv_content);
+            ImageView iv_closebreak = (ImageView) ll_content.findViewById(R.id.iv_closebreak);
+            tv_content.setText(testList.get(i).toString());
+            iv_closebreak.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //对当前显示的视图进行移除
+                    flipper.removeView(ll_content);
+                    count--;
+                    //当删除后仅剩 一条 新闻时，则取消滚动
+                    if (count == 1) {
+                        flipper.stopFlipping();
+                    }
+                }
+            });
+            flipper.addView(ll_content);
+        }
         top_baoyang.setOnClickListener(this);
         top_weixiu.setOnClickListener(this);
                 top_zhanshi.setOnClickListener(this);
@@ -117,6 +208,21 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
 
     }
+
+    private void initboom() {
+      home_list =  (ListView)   bomm.findViewById(R.id.home_listbom);
+        for (int i = 0; i <5 ; i++) {
+         mlist.add(new HomeBean(R.mipmap.ic_launcher,R.mipmap.xiche1,"精品"+i,"惠尔普斯店铺"+i,"329人付款","$999"+i));
+        }
+        getActivity().runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+              HomeDapter  homeDapter = new HomeDapter(getActivity(),mlist);
+              home_list.setAdapter(homeDapter);
+          }
+      });
+    }
+
     private void initbanner() {
         shopList.clear();
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -133,13 +239,11 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
 
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.e("TAG", "错误：" + e.getMessage());
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 string1 = response.body().string();
            bean = new Gson().fromJson(string1, BannerBean.class);
-                Log.e("TAG", "成功==：" + string1);
                getActivity().runOnUiThread(new Runnable() {
                     private String s;
                     @Override
@@ -177,9 +281,12 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     @Override
     protected void loadData() {
         //  头布局
-        ListView refreshableView = pullListView.getRefreshableView();
-        refreshableView.addHeaderView(top);
-        refreshableView.setAdapter(null);
+//        ListView refreshableView = pullListView.getRefreshableView();
+        pullListView.addHeaderView(top);
+        //尾布局
+
+        pullListView.addHeaderView(bomm);
+        pullListView.setAdapter(null);
         top_jia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -212,9 +319,20 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         switch (view.getId()){
             //保养
             case R.id.top_baoyang :
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.framelayout, new ShopFraments(), null)
+                        .addToBackStack(null)
+                        .commit();
+
                 break;
                 //维修
             case  R.id.top_weixiu:
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.framelayout, new ShopFraments(), null)
+                        .addToBackStack(null)
+                        .commit();
                 break;
                 //展示
             case  R.id.top_zhanshi:
@@ -224,21 +342,34 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
                 break;
             //精品
             case  R.id.top_jingpin:
+  startActivity(new Intent(getActivity(), JingpinActivity.class));
                 break;
             //洗车
             case  R.id.top_xiche:
+startActivity(new Intent(getActivity(), XiCarActivity.class));
                 break;
             //活动
             case  R.id.top_huodong:
                 break;
             //积分
             case  R.id.top_jifen:
+             startActivity(new Intent(getActivity(), JifenActivity.class));
                 break;
             //违章
             case  R.id.top_weizhang:
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.framelayout, new ShopFraments(), null)
+                        .addToBackStack(null)
+                        .commit();
                 break;
             //救援
             case  R.id.top_jiuyuan:
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.framelayout, new ShopFraments(), null)
+                        .addToBackStack(null)
+                        .commit();
                 break;
         }
     }
@@ -250,6 +381,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         }
 
     }
+    @SuppressLint("NewApi")
     public void but(View v) {
 
         View view = View.inflate(getActivity(), R.layout.menu_item, null);
@@ -309,6 +441,6 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     @Override
     public void onPause() {
         super.onPause();
-        bannerlist.clear();
+//        bannerlist.clear();
     }
 }
