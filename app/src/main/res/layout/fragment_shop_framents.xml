@@ -37,7 +37,7 @@
                 android:minHeight="48dp"
                 android:text="购物车"
                 android:textColor="#FFFFFF"
-                android:textSize="38sp" />
+                android:textSize="38px" />
 
             <TextView
                 android:id="@+id/subtitle"
@@ -50,7 +50,7 @@
                 android:minHeight="48dp"
                 android:text="编辑"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
+                android:textSize="38px"
                 android:visibility="visible" />
         </RelativeLayout>
     </LinearLayout>

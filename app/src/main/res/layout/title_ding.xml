@@ -22,6 +22,6 @@
         android:layout_centerVertical="true"
         android:text="积分商城"
         android:textColor="#FAFAFA"
-        android:textSize="38sp" />
+        android:textSize="38px" />
 
 </RelativeLayout>

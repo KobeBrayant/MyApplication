@@ -12,9 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="20px"></View>
     <RadioGroup
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="145px"
+        android:layout_height="170px"
         android:orientation="horizontal"
         >
         <RadioButton
@@ -32,14 +31,14 @@
             android:textSize="30px"
             />
         <RadioButton
-            android:id="@+id/top_zhanshi"
+android:id="@+id/top_zhanshi"
             style="@style/TabBtn"
             android:drawableTop="@mipmap/dianzhanting"
             android:text="4S店展厅"
             android:textSize="30px"
             />
         <RadioButton
-            android:id="@+id/top_xubao"
+android:id="@+id/top_xubao"
             style="@style/TabBtn"
             android:drawableTop="@mipmap/dianxubao"
             android:text="4S店续保"
@@ -54,8 +53,9 @@
             />
     </RadioGroup>
     <RadioGroup
+
         android:layout_width="match_parent"
-        android:layout_height="145px"
+        android:layout_height="170px"
         android:orientation="horizontal"
         >
         <RadioButton
@@ -66,21 +66,21 @@
             android:textSize="30px"
             />
         <RadioButton
-            android:id="@+id/top_huodong"
+android:id="@+id/top_huodong"
             style="@style/TabBtn"
             android:drawableTop="@mipmap/jingcaihuodong"
             android:text="精彩活动"
             android:textSize="30px"
             />
         <RadioButton
-            android:id="@+id/top_jifen"
+android:id="@+id/top_jifen"
             style="@style/TabBtn"
             android:drawableTop="@mipmap/jifenshangcheng"
             android:text="积分商场"
             android:textSize="30px"
             />
         <RadioButton
-            android:id="@+id/top_weizhang"
+android:id="@+id/top_weizhang"
             style="@style/TabBtn"
             android:drawableTop="@mipmap/weizhangchaxun"
             android:text="违章查询"
@@ -94,7 +94,8 @@
             android:textSize="30px"
             />
     </RadioGroup>
-<View
+
+    <View
     android:background="#C0BBB7"
     android:layout_width="match_parent"
     android:layout_height="4dp"></View>
