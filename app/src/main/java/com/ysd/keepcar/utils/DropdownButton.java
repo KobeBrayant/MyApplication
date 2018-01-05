@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ysd.keepcar.R;
 
@@ -201,12 +200,12 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
                 holder = (ViewHolder) convertView.getTag();
             }
             holder.tv.setText(drops.get(position).getName());
-            convertView.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(context,drops.get(position).getName(),Toast.LENGTH_SHORT).show();
-                }
-            });
+//            convertView.setOnClickListener(new OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Toast.makeText(context,drops.get(position).getName(),Toast.LENGTH_SHORT).show();
+//                }
+//            });
             holder.tv.setTextSize(20);
             if(drops.get(position).isChoiced()){
                 holder.tig.setVisibility(VISIBLE);

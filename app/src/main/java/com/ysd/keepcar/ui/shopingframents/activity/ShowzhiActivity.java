@@ -19,6 +19,7 @@ public class ShowzhiActivity extends BaseActivity {
     protected void initView() {
        title_biao = (TextView) findViewById(R.id.title_biao);
       title_biao.setText("确认订单");
+
     }
 
     @Override

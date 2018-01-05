@@ -2,6 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ysd.keepcar">
 
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.INTERNET" />
     //联网
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -29,11 +50,6 @@
             android:name="design_height"
             android:value="1334" />
 
-        <activity
-            android:name="com.zaaach.citypicker.CityPickerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/CityPicker.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".city.CitiActivity" />
         <activity android:name=".ui.homeframent.qrcode.EWMActivity" />
         <activity android:name=".ui.homeframent.qrcode.SYSActivity" />
@@ -45,17 +61,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 82c981c9708542f03014071eb7bddd5f -->
 
-
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="e942820907078544f361cdfbbe8303b2" />
+        <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".ui.jifen.JifenActivity" />
         <activity android:name=".ui.homeframent.jingpin.JingpinActivity" />
         <activity android:name=".ui.jifen.XiangqingActivity" />
         <activity android:name=".ui.xiche.XiCarActivity" />
-        <activity android:name=".ui.shopingframents.activity.ShowzhiActivity"></activity>
+        <activity android:name=".chengshi.CityPickerActivity" />
+        <activity android:name=".chengshi.CheckPermissionsActivity" />
+        <activity android:name=".ui.shopingframents.activity.ShowzhiActivity" />
+        <activity android:name=".ui.homeframent.zhanshiting.TheHallActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="82c981c9708542f03014071eb7bddd5f"></meta-data>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".ui.homeframent.xubao.XubaoActivity"></activity>
     </application>
 
 </manifest>

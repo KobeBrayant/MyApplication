@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.ysd.keepcar.ui.homeframent.zhanshiting.TheHallActivity">
+<include layout="@layout/title_ding" ></include>
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/xincar_o"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_weight="1"
+        android:text="新车展厅"
+        android:textColor="@color/red"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<TextView
+
+    android:id="@+id/ershoucar_o"
+    android:gravity="center_horizontal"
+    android:textSize="25sp"
+    android:layout_weight="1"
+    android:text="二手车展厅"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</com.zhy.autolayout.AutoLinearLayout>

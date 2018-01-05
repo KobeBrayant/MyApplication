@@ -5,10 +5,8 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -26,6 +24,7 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+import com.ysd.keepcar.chengshi.CityPickerActivity;
 import com.ysd.keepcar.ui.WonderfulActivities;
 import com.ysd.keepcar.ui.homeframent.baner.BannerBean;
 import com.ysd.keepcar.ui.homeframent.baner.HomeBean;
@@ -34,10 +33,11 @@ import com.ysd.keepcar.ui.homeframent.baner.Horbean;
 import com.ysd.keepcar.ui.homeframent.jingpin.JingpinActivity;
 import com.ysd.keepcar.ui.homeframent.qrcode.EWMActivity;
 import com.ysd.keepcar.ui.homeframent.qrcode.SYSActivity;
+import com.ysd.keepcar.ui.homeframent.xubao.XubaoActivity;
+import com.ysd.keepcar.ui.homeframent.zhanshiting.TheHallActivity;
 import com.ysd.keepcar.ui.jifen.JifenActivity;
 import com.ysd.keepcar.ui.shopingframents.ShopFraments;
 import com.ysd.keepcar.ui.xiche.XiCarActivity;
-import com.zaaach.citypicker.CityPickerActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -197,7 +197,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         }
         top_baoyang.setOnClickListener(this);
         top_weixiu.setOnClickListener(this);
-                top_zhanshi.setOnClickListener(this);
+         top_zhanshi.setOnClickListener(this);
         top_xubao.setOnClickListener(this);
         top_jingpin.setOnClickListener(this);
         top_xiche.setOnClickListener(this);
@@ -299,12 +299,16 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
         top_bei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+             //
                 startActivityForResult(new Intent(getActivity(), CityPickerActivity.class),
                         REQUEST_CODE_PICK_CITY);
+
+
+
             }
         });
-    }
 
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE_PICK_CITY && resultCode == RESULT_OK) {
@@ -314,6 +318,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
             }
         }
     }
+
 
     @Override
     public void onClick(View view) {
@@ -337,9 +342,11 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
                 break;
                 //展示
             case  R.id.top_zhanshi:
+                startActivity(new Intent(getActivity(), TheHallActivity.class));
                 break;
             //续保
             case  R.id.top_xubao:
+                startActivity(new Intent(getActivity(), XubaoActivity.class));
                 break;
             //精品
             case  R.id.top_jingpin:

@@ -17,7 +17,7 @@
 
     <!--最下边为RadioGroup-->
     <RadioGroup
-        android:padding="5dp"
+
         android:id="@+id/mBottomGroup"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
 
         <!--第一个RadioButton-->
         <RadioButton
-            android:drawablePadding="5dp"
+
             android:textSize="24px"
             android:layout_marginTop="5dp"
             android:id="@+id/my_home"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content" />
         <!--第二个RadioButton-->
         <RadioButton
-            android:drawablePadding="5dp"
+
             android:textSize="24px"
             android:layout_marginTop="5dp"
             android:id="@+id/my_fors"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content" />
         <!--第三个RadioButton-->
         <RadioButton
-            android:drawablePadding="5dp"
+
             android:layout_marginTop="5dp"
             android:id="@+id/my_shoping"
             android:button="@null"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content" />
         <!--第四个RadioButton-->
         <RadioButton
-            android:drawablePadding="5dp"
+
             android:layout_marginTop="5dp"
             android:id="@+id/my_myprison"
             android:button="@null"

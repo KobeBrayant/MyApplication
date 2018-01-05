@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.ysd.keepcar.ui.homeframent.zhanshiting.frament.AllFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:drawableRight="@mipmap/guanbi"
+            android:text="品牌"
+            android:id="@+id/time1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+        <com.ysd.keepcar.utils.DropdownButton
+            android:id="@+id/time2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
