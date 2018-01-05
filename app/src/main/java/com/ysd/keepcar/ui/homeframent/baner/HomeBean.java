@@ -5,7 +5,7 @@ package com.ysd.keepcar.ui.homeframent.baner;
  */
 
 public class HomeBean {
-    private int Imageone;
+       private int Imageone;
     private  int Imagetwo;
     private String mname;
     private  String mcontent;

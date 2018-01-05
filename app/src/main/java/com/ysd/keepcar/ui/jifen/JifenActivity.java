@@ -19,7 +19,7 @@ import java.util.List;
 
 public class JifenActivity extends AppCompatActivity {
     private DropdownButton dropdownButton1;
-    private DropdownButton dropdownButton2;
+       private DropdownButton dropdownButton2;
     private DropdownButton dropdownButton3;
     private List<DropBean> times;
     private List<DropBean> types;

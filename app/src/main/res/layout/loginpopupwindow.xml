@@ -4,7 +4,7 @@
     android:layout_height="250px"
     android:gravity="center"
     android:background="#fafaf6"
-    android:orientation="vertical">
+      android:orientation="vertical">
 <TextView
     android:layout_gravity="center"
     android:id="@+id/switch_num"

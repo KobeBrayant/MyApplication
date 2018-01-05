@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 public class Gridgedapter extends BaseAdapter {
-    private Context context;
+       private Context context;
     private List<HomeBean> mlist;
     private TextView jifen_gongsi;
 

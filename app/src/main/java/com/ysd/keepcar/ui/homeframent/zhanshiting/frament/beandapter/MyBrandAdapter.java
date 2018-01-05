@@ -21,7 +21,7 @@ import java.util.List;
 
 
 public class MyBrandAdapter extends RecyclerView.Adapter<MyBrandAdapter.ViewHolder> {
-    private List<BranBeen.DataBean> data;
+       private List<BranBeen.DataBean> data;
     private Context context;
 
     public MyBrandAdapter(List<BranBeen.DataBean> data, Context context) {

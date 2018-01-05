@@ -7,7 +7,7 @@ import java.util.List;
  */
 
 public class BannerBean {
-    private String code;
+       private String code;
     private String msg;
     private List<String> data;
 

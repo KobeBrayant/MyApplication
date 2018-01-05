@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class XiCarActivity extends AppCompatActivity {
 
-    private TextView titlebiao;
+      private TextView titlebiao;
     private ImageView title_fanhui;
     private ImageView title_fan;
     private DropdownButton dropdownButton1;

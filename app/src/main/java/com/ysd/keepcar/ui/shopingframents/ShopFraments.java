@@ -31,7 +31,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class ShopFraments extends BaseFragMent implements ShopcartAdapter.CheckInterface,
-        ShopcartAdapter.ModifyCountInterface, ShopcartAdapter.GroupEdtorListener, View.OnClickListener {
+           ShopcartAdapter.ModifyCountInterface, ShopcartAdapter.GroupEdtorListener, View.OnClickListener {
     ImageView back;
     TextView title;
     TextView subtitle;

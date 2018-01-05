@@ -5,7 +5,7 @@ package com.ysd.keepcar.ui.homeframent.baner;
  */
 
 public class Horbean {
-    private  String name;
+       private  String name;
     private  int Image;
 
     public Horbean(String name, int image) {

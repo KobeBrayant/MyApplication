@@ -12,7 +12,7 @@ public class ShowzhiActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_showzhi;
+            return R.layout.activity_showzhi;
     }
 
     @Override

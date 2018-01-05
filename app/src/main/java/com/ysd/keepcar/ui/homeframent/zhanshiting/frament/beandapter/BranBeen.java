@@ -56,7 +56,7 @@ public class BranBeen {
         private Object key;
         private Object value;
         private Object price;
-        private List<BrandListBean> brandList;
+           private List<BrandListBean> brandList;
 
         public String getInitKey() {
             return initKey;

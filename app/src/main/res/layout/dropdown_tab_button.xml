@@ -7,7 +7,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+          android:layout_centerInParent="true"
         android:drawablePadding="2dp"
         android:drawableRight="@mipmap/ic_dropdown_normal"
         android:ellipsize="end"

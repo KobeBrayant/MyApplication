@@ -53,7 +53,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
     private RecyclerView mBrandList;
 
     @Override
-    protected int getLayoutId() {
+        protected int getLayoutId() {
         return R.layout.fragment_thell;
     }
 

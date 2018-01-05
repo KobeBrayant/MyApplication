@@ -227,7 +227,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 <TextView
-    android:textSize="15sp"
+     android:textSize="15sp"
     android:textColor="#BCBCBC"
     android:text="如果与上期是同一家保险公司而且同一家4S店续保 ， 无需本人到店 ， 直接对索取报价单完成支付即可 ， 电子保单将自动发送到指定邮箱。"
     android:layout_width="wrap_content"

@@ -39,7 +39,7 @@ public class MyBrandAdapter extends RecyclerView.Adapter<MyBrandAdapter.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(context).inflate(R.layout.item_brand, parent, false);
         ViewHolder viewHolder = new ViewHolder(inflate);
-        return viewHolder;
+            return viewHolder;
     }
 
     @Override

@@ -107,7 +107,7 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
     }
 
     private void initPettypeView1(View vicinityView) {
-        mBrandList = (RecyclerView) vicinityView.findViewById(R.id.recyclerView);
+           mBrandList = (RecyclerView) vicinityView.findViewById(R.id.recyclerView);
         WaveSideBar waveSideBar = (WaveSideBar) vicinityView.findViewById(R.id.waveSideBar);
         waveSideBar.setTextColor(Color.BLACK);
         waveSideBar.setMaxOffset(10);//字母偏移量

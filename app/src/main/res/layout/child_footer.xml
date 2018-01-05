@@ -6,7 +6,7 @@
        android:id="@+id/txtFooter"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="#345746"
+        android:background="#345746"
        android:textColor="#ffffff"
        android:text="店铺满99元包邮"/>
 

@@ -44,7 +44,7 @@ public class TheHallActivity extends BaseActivity implements View.OnClickListene
 
         xincar_o.setOnClickListener(this);
         ershou_o.setOnClickListener(this);
-  addFragment(allFragment);
+      addFragment(allFragment);
     }
     @Override
     public void finish() {

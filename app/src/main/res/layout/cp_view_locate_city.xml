@@ -8,7 +8,7 @@
 
     <TextView
         style="@style/LetterIndexTextViewStyle"
-        android:text="@string/cp_located_city"/>
+         android:text="@string/cp_located_city"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

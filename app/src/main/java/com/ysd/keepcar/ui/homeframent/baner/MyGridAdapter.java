@@ -5,17 +5,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 
 import com.ysd.keepcar.R;
-import com.ysd.keepcar.ui.WonderfulActivities;
 
 /**
  * Created by 刘贵河 on 2018/1/3.
  */
 
 public class MyGridAdapter extends BaseAdapter {
-    private int[] images;
+      private int[] images;
     private ViewHolder holder;
     private Context context;
     public MyGridAdapter(int[] images,Context context) {

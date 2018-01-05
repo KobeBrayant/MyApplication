@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.ysd.keepcar.ui.jifen.XiangqingActivity">
-    <com.youth.banner.Banner
+     <com.youth.banner.Banner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="250dp"></com.youth.banner.Banner>

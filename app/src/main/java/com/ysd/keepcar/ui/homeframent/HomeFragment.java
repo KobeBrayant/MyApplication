@@ -345,7 +345,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), TheHallActivity.class));
                 break;
             //续保
-            case  R.id.top_xubao:
+                case  R.id.top_xubao:
                 startActivity(new Intent(getActivity(), XubaoActivity.class));
                 break;
             //精品
