@@ -41,7 +41,7 @@ import okhttp3.Response;
 public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectIndexItemListener {
 
 
-    private TextView dropdownButton1;
+       private TextView dropdownButton1;
     private DropdownButton dropdownButton2;
     private DropdownButton dropdownButton3;
     private TextView shaixuan_btn;
