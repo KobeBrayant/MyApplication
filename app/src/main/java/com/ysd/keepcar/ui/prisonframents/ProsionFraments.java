@@ -64,6 +64,7 @@ public class ProsionFraments extends BaseFragMent {
     }
 
  private void showPopWindow(View view) {
+
      try {
 
          mPopWindow = new PopupWindow(view,200,

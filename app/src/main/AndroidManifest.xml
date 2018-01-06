@@ -64,7 +64,7 @@
         <!-- 82c981c9708542f03014071eb7bddd5f -->
 
         <service android:name="com.amap.api.location.APSService" />
-
+<activity android:name=".ui.forsframents.Four_s_ShopActivity"/>
         <activity android:name=".ui.jifen.JifenActivity" />
         <activity android:name=".ui.homeframent.jingpin.JingpinActivity" />
         <activity android:name=".ui.jifen.XiangqingActivity" />
