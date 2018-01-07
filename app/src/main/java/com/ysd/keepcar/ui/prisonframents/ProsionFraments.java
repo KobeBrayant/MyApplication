@@ -17,7 +17,6 @@ import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.loginmodoule.LoginActivity;
 import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
-import static android.content.ContentValues.TAG;
 
 
 /**

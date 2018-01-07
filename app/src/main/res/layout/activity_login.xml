@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="238px"
-        android:layout_height="127px"
+        android:layout_width="@dimen/x220"
+        android:layout_height="@dimen/y22"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="128px"
