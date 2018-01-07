@@ -19,13 +19,14 @@
 
     <FrameLayout
         android:id="@+id/userphone_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/x245"
+        android:layout_height="@dimen/y25"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView"
         android:layout_marginLeft="40px"
+        android:layout_centerInParent="true"
         android:layout_marginRight="40px"
-        android:layout_marginTop="170px"
+        android:layout_marginTop="75px"
         android:background="#00000000"
         tools:ignore="RtlCompat">
 
@@ -41,8 +42,8 @@
 
     <FrameLayout
         android:id="@+id/verification_code_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/x245"
+        android:layout_height="@dimen/y25"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/userphone_layout"
         android:layout_marginLeft="40px"
@@ -57,7 +58,7 @@
             android:background="@drawable/rounded_edittext"
             android:drawableLeft="@drawable/verification_code"
             android:maxLength="11"
-            android:textSize="26sp" />
+           />
 
     </FrameLayout>
 

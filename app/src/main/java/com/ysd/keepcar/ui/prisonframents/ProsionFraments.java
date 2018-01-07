@@ -36,17 +36,17 @@ public class ProsionFraments extends BaseFragMent {
 
     @Override
     protected void init(View view) {
-        menu_login = view.findViewById(R.id.menu_login);
-        icon_login = view.findViewById(R.id.icon_login);
+        //menu_login = view.findViewById(R.id.menu_login);
+ /*       icon_login = view.findViewById(R.id.icon_login);
         loginName = view.findViewById(R.id.name_login);
 
         inflate = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
-
+*/
     }
 
     @Override
     protected void loadData() {
-        menu_login.setOnClickListener(new View.OnClickListener() {
+     /*   menu_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showPopWindow(inflate);
@@ -60,9 +60,9 @@ public class ProsionFraments extends BaseFragMent {
                 startActivity(intent);
             }
         });
-    }
+    }*/
 
- private void showPopWindow(View view) {
+ /*private void showPopWindow(View view) {
 
      try {
 
@@ -102,5 +102,6 @@ public class ProsionFraments extends BaseFragMent {
         super.onResume();
         String userphone = (String) SharedPreferencesUtils.getParam(getActivity(), "userphone", "");
         loginName.setText(userphone);
+    }*/
     }
 }

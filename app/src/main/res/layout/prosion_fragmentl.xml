@@ -3,207 +3,168 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
->
-
-    <com.zhy.autolayout.AutoRelativeLayout
-        android:layout_width="match_parent"
-          android:layout_height="120px">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="120px"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="#343434"
-            android:gravity="center"
-            android:text="个人中心"
-            android:textColor="#ffff"
-            android:textSize="38px" />
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rightxhdpi"
-            android:id="@+id/menu_login"/>
-    </com.zhy.autolayout.AutoRelativeLayout>
+    >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.zhy.autolayout.AutoLinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.zhy.autolayout.AutoRelativeLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="380px"
-                android:background="@mipmap/ic_launcher">
-
-                <ImageView
-                    android:id="@+id/icon_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background"
-                    android:layout_centerInParent="true"/>
+                android:layout_height="480px"
+                android:background="@drawable/baijing">
+              <ImageView
+                  android:layout_width="80dp"
+                  android:layout_height="80dp"
+                  android:id="@+id/icon_login"/>
                 <TextView
+                    android:layout_centerInParent="true"
                     android:id="@+id/name_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="17647572011"
+                    android:layout_marginBottom="298dp"
                     android:paddingTop="10px"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/icon_login"/>
+                    android:text="1111111111"
+                    android:textSize="30px" />
+            </RelativeLayout>
+            <LinearLayout
 
-            </com.zhy.autolayout.AutoRelativeLayout>
-
-            <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginTop="20px"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_marginLeft="30px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60px"
-                    android:src="@drawable/myorder"
-                    />
+                    android:layout_width="@dimen/x25"
+                    android:layout_height="@dimen/y20"
+                    android:layout_marginLeft="35px"
+                    android:src="@drawable/myorder" />
                 <TextView
+                    android:id="@+id/my_dingdan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="30px"
-                    android:textSize="30px"
-                    android:textColor="#ef8318"
+                    android:text="我的订单"
                     android:layout_gravity="center"
-                    android:text="我的订单"/>
-            </com.zhy.autolayout.AutoLinearLayout>
+                    android:textColor="#ef8318"
+                    android:textSize="30px" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2px"
-                android:layout_marginTop="10px"
+                android:layout_marginTop="30px"
                 android:background="#c2c2c6"></View>
             <RadioGroup
                 android:id="@+id/group_dingdan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
                 android:orientation="horizontal">
-
                 <RadioButton
                     android:id="@+id/daifukuan_rabtn"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:text="待付款"
-                    android:textColor="#999"
-                    android:textSize="26px"
+                    android:drawableTop="@drawable/pending_payment"
                     android:gravity="center"
                     android:paddingTop="10px"
-                    android:drawableTop="@drawable/pending_payment"
-                    android:layout_height="wrap_content" />
+                    android:text="待付款"
+                    android:textColor="#999"
+                    android:textSize="26px" />
                 <RadioButton
                     android:id="@+id/daishigong_rabtn"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:textColor="#999"
-                    android:gravity="center"
-                    android:text="带施工"
-                    android:textSize="26px"
                     android:drawableTop="@drawable/belt_construction"
-                    android:layout_height="wrap_content" />
+                    android:gravity="center"
+                    android:text="待施工"
+                    android:textColor="#999"
+                    android:textSize="26px" />
                 <RadioButton
                     android:id="@+id/daifahuo_rabtn"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:text="代发货"
-                    android:textColor="#999"
-                    android:textSize="26px"
-                    android:gravity="center"
                     android:drawableTop="@drawable/belt_delivery"
-                    android:layout_height="wrap_content" />
+                    android:gravity="center"
+                    android:text="待发货"
+                    android:textColor="#999"
+                    android:textSize="26px" />
                 <RadioButton
                     android:id="@+id/daishouhuo_rabtn"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:textColor="#999"
-                    android:text="代收货"
-                    android:textSize="26px"
-                    android:gravity="center"
                     android:drawableTop="@drawable/received"
-                    android:layout_height="wrap_content" />
+                    android:gravity="center"
+                    android:text="待收货"
+                    android:textColor="#999"
+                    android:textSize="26px" />
                 <RadioButton
                     android:id="@+id/daipingjia_rabtn"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
+                    android:drawableTop="@drawable/evaluated"
                     android:gravity="center"
                     android:text="待评价"
                     android:textColor="#999"
-                    android:textSize="26px"
-                    android:drawableTop="@drawable/evaluated"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:id="@+id/yiquxiao_rabtn"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="待付款"
-                    android:textColor="#999"
-                    android:textSize="26px"
-                    android:drawableTop="@drawable/pending_payment"
-                    android:layout_height="wrap_content" />
+                    android:textSize="26px" />
             </RadioGroup>
-
             <View
-                android:layout_marginTop="20px"
                 android:layout_width="match_parent"
-                android:layout_height="20px"
-                android:background="#e4e3e3"
-                ></View>
+                android:layout_height="30px"
+                android:layout_marginTop="20px"
+                android:background="#eae9e9"></View>
             <RelativeLayout
-                android:layout_marginTop="20px"
+                android:id="@+id/my_car"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="@dimen/y20"
+                android:layout_marginTop="20px"
+                >
                 <ImageView
+                    android:layout_centerVertical="true"
                     android:id="@+id/mycars_img"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/y15"
                     android:layout_marginLeft="35px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/mycar"/>
-
+                    android:src="@drawable/mycar" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/mycars_img"
                     android:layout_toRightOf="@+id/mycars_img"
                     android:paddingLeft="30px"
                     android:text="我的车辆"
+                    android:layout_centerInParent="true"
                     android:textColor="#17a1e6"
                     android:textSize="30px" />
                 <ImageView
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/edit"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginRight="20px"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/choice" />
+
+
             </RelativeLayout>
             <View
-                android:layout_marginTop="20px"
                 android:layout_width="match_parent"
                 android:layout_height="2px"
-                android:background="#dfdddd"></View>
-
-            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_marginTop="20px"
+                android:background="#eae9e9"></View>
+            <RelativeLayout
+                android:id="@+id/dangqian_car"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20px">
-
                 <TextView
                     android:id="@+id/current_car"
                     android:layout_width="wrap_content"
@@ -212,7 +173,6 @@
                     android:text="当前车辆"
                     android:textColor="#343434"
                     android:textSize="30px" />
-
                 <ImageView
                     android:id="@+id/img_go"
                     android:layout_width="wrap_content"
@@ -221,92 +181,202 @@
                     android:layout_centerInParent="true"
                     android:layout_marginRight="20px"
                     android:src="@drawable/choice" />
-
                 <TextView
                     android:id="@+id/current_cars"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10px"
-                    android:textSize="26px"
                     android:layout_toLeftOf="@+id/img_go"
-                    android:text="奥迪A6" />
-            </com.zhy.autolayout.AutoRelativeLayout>
-
+                    android:text="1111"
+                    android:textSize="26px" />
+            </RelativeLayout>
             <View
-                android:layout_marginTop="20px"
                 android:layout_width="match_parent"
-                android:layout_height="20px"
-                android:background="#dfdfdf"
-                ></View>
-            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_height="30px"
                 android:layout_marginTop="20px"
+                android:background="#eae9e9"></View>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
                 android:orientation="horizontal">
+
                 <ImageView
-                    android:layout_marginLeft="35px"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/myaccount"/>
+                    android:layout_marginLeft="35px"
+                    android:src="@mipmap/myaccount" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="30px"
-                    android:textSize="30px"
+                    android:text="我的账户"
+                    android:layout_gravity="center"
                     android:textColor="#ef8318"
-                    android:text="我的账户"/>
-            </com.zhy.autolayout.AutoLinearLayout>
+                    android:textSize="30px" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2px"
-                android:layout_marginTop="10px"
+                android:layout_marginTop="30px"
                 android:background="#c2c2c6"></View>
-            <com.zhy.autolayout.AutoRelativeLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="20px"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px">
                 <TextView
                     android:id="@+id/current_dianmian"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30px"
                     android:layout_marginLeft="35px"
+                    android:text="所在店面"
                     android:textColor="#343434"
-                    android:text="所在店面"/>
+                    android:textSize="30px" />
                 <ImageView
                     android:id="@+id/img_gos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/choice"
+                    android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
                     android:layout_marginRight="20px"
-                    android:layout_alignParentRight="true"
-                    />
+                    android:src="@drawable/choice" />
                 <TextView
                     android:id="@+id/dianmian_current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="某某某店铺"
-                    android:textSize="26px"
                     android:layout_marginRight="10px"
-                    android:layout_toLeftOf="@+id/img_gos"/>
-            </com.zhy.autolayout.AutoRelativeLayout>
-            <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_toLeftOf="@+id/img_gos"
+                    android:text="1111"
+                    android:textSize="26px" />
+            </RelativeLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="30px"
+                android:layout_marginTop="25px"
                 android:orientation="horizontal"
-                android:layout_height="30px">
+                android:visibility="gone">
                 <View
                     android:layout_width="0px"
+                    android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:background="#ef8318"
-                    android:layout_height="wrap_content"></View>
+                    android:background="#ef8318"></View>
                 <View
                     android:layout_width="0px"
+                    android:layout_height="wrap_content"
                     android:layout_weight="7"
-                    android:background="#ffff"
-                    android:layout_height="wrap_content"></View>
-            </com.zhy.autolayout.AutoLinearLayout>
-        </com.zhy.autolayout.AutoLinearLayout>
+                    android:background="#ffff"></View>
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/rid_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30px"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/jifen_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/jifen"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="积分"
+                    android:textSize="26px" />
+                <RadioButton
+                    android:id="@+id/xiangmu_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/xiangmu"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="项目"
+                    android:textSize="26px"
+                    android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/chuzhi_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/chuzhi"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="储值"
+                    android:textSize="26px" />
+                <RadioButton
+                    android:id="@+id/xiche_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/xiche"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="洗车"
+                    android:textSize="26px"
+                    android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/yuequan_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/yuequan"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="余额券"
+                    android:textSize="26px" />
+                <RadioButton
+                    android:id="@+id/jibiezhekou_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/huiyuan"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="级别折扣"
+                    android:textSize="26px"
+                    android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/dingequan_btn"
+                    android:layout_width="0px"
+                    android:layout_height="50px"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_jifen"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/dingequan"
+                    android:gravity="center"
+                    android:paddingLeft="40px"
+                    android:text="定额券"
+                    android:textSize="26px" />
+            </RadioGroup>
+            <FrameLayout
+                android:id="@+id/frag_zhanghu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></FrameLayout>
+        </LinearLayout>
     </ScrollView>
 
 </com.zhy.autolayout.AutoLinearLayout>
