@@ -1,9 +1,12 @@
 package com.ysd.keepcar.ui.forsframents;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
@@ -25,6 +28,8 @@ public class ForSFragment extends BaseFragMent {
     private List<DropBean> types;
     private List<DropBean> names;
     private GridView gridView;
+    private ListView carList;
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_for;
@@ -38,12 +43,30 @@ public class ForSFragment extends BaseFragMent {
         dropdownButton2.setText("店面");
         dropdownButton3 = (DropdownButton) view.findViewById(R.id.time3);
         dropdownButton3.setText("排序");
+        carList = (ListView) view.findViewById(R.id.four_list4s);
 
+        List<FourBean> carlist = new ArrayList<>();
+        for (int i = 0; i < 2; i++) {
+            carlist.add(new FourBean(R.mipmap.ic_launcher,"宝马"));
+        }
+        carList.setAdapter(new MyFourListAdapter(getActivity(),carlist));
+
+
+        carList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(getActivity(),Four_s_ShopActivity.class));
+            }
+        });
 
     }
 
+
     @Override
     protected void loadData() {
+
+
+
         times = new ArrayList<>();
         types = new ArrayList<>();
         names = new ArrayList<>();
