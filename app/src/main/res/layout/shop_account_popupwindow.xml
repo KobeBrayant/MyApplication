@@ -105,4 +105,36 @@
             android:layout_toRightOf="@id/tv_jifen1"
             android:layout_marginLeft="100px"/>
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未指定车辆"
+            android:textSize="@dimen/txt_20"
+            android:textColor="@color/coral"
+            android:id="@+id/tv_car"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前积分"
+            android:textSize="@dimen/txt_20"
+            android:layout_below="@id/tv_car"
+            android:layout_marginTop="20px"
+            android:id="@+id/tv_jifen2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20000"
+            android:textSize="@dimen/txt_20"
+            android:layout_marginTop="20px"
+            android:layout_below="@id/tv_car"
+            android:layout_toRightOf="@id/tv_jifen2"
+            android:layout_marginLeft="100px"/>
+    </RelativeLayout>
 </LinearLayout>
