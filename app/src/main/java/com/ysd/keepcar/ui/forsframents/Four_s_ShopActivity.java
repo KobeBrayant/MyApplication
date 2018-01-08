@@ -85,6 +85,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         list.add("新车");
         list.add("二手车");
         list.add("积分商场");
+        list.add("洗车");
 
         ArrayList<Fragment> fragmentslist = new ArrayList<>();
         Boutique_Fragment boutique_fragment = new Boutique_Fragment();
