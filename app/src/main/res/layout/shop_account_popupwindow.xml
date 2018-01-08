@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="80px"
+    android:text="本店账户"
+    android:textSize="@dimen/txt_20"
+    android:textColor="#000"
+    android:background="@color/colorGreyBottom"
+    android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="150px"
+            android:layout_weight="1"
+            android:src="@drawable/account_jifen"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="130px"
+            android:layout_weight="1"
+            android:src="@drawable/account_chuzhi"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="130px"
+            android:layout_weight="1"
+            android:src="@drawable/account_balance"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="130px"
+            android:layout_weight="1"
+            android:src="@drawable/account_quota"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京A888 奥迪 A6"
+            android:textSize="@dimen/txt_20"
+            android:textColor="@color/coral"
+            android:id="@+id/tv_jin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前积分"
+            android:textSize="@dimen/txt_20"
+            android:layout_below="@id/tv_jin"
+            android:layout_marginTop="20px"
+            android:id="@+id/tv_jifen"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20000"
+            android:textSize="@dimen/txt_20"
+            android:layout_marginTop="20px"
+            android:layout_below="@id/tv_jin"
+            android:layout_toRightOf="@id/tv_jifen"
+            android:layout_marginLeft="100px"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorGreyBottom"
+        android:layout_marginTop="20px"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京A888 奥迪 A6"
+            android:textSize="@dimen/txt_20"
+            android:textColor="@color/coral"
+            android:id="@+id/tv_jinA"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前积分"
+            android:textSize="@dimen/txt_20"
+            android:layout_below="@id/tv_jinA"
+            android:layout_marginTop="20px"
+            android:id="@+id/tv_jifen1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20000"
+            android:textSize="@dimen/txt_20"
+            android:layout_marginTop="20px"
+            android:layout_below="@id/tv_jinA"
+            android:layout_toRightOf="@id/tv_jifen1"
+            android:layout_marginLeft="100px"/>
+    </RelativeLayout>
+</LinearLayout>
