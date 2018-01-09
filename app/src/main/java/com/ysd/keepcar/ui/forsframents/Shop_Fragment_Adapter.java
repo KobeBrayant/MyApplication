@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 
 public class Shop_Fragment_Adapter extends FragmentPagerAdapter {
+
     private ArrayList<String> list;
     private ArrayList<Fragment> fragmentslist;
 

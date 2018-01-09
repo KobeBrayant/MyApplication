@@ -46,6 +46,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
     private PopupWindow popupWindow;
     private PopupWindow popupWindow1;
 
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_four_s__shop;
