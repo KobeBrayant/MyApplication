@@ -66,7 +66,6 @@ public class ForSFragment extends BaseFragMent {
     protected void loadData() {
 
 
-
         times = new ArrayList<>();
         types = new ArrayList<>();
         names = new ArrayList<>();

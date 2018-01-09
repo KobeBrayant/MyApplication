@@ -23,10 +23,9 @@
     <!-- 用于申请获取蓝牙信息进行室内定位 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    //联网
+    <!--读取外置存储卡-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    //读取外置存储卡
+
     <application
         android:name=".app.AppUtils"
         android:allowBackup="true"
@@ -45,10 +44,10 @@
         <!-- 注明设计稿的尺寸  750 1334 -->
         <meta-data
             android:name="design_width"
-            android:value="720" />
+            android:value="750" />
         <meta-data
             android:name="design_height"
-            android:value="1280" />
+            android:value="1335" />
 
         <activity android:name=".city.CitiActivity" />
         <activity android:name=".ui.homeframent.qrcode.EWMActivity" />
@@ -75,9 +74,7 @@
         <activity android:name=".ui.shopingframents.activity.ShowzhiActivity" />
         <activity android:name=".ui.homeframent.zhanshiting.TheHallActivity" />
 
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="d31f7720dd1ae447f680d488d230e735" />
+
 
         <service android:name="com.amap.api.location.APSService" />
 
@@ -87,6 +84,10 @@
             android:label="@string/title_activity_huoqu"
             android:theme="@style/CityPicker.NoActionBar" />
         <activity android:name=".ui.shopingframents.activity.ShouhuoActivity"></activity>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d31f7720dd1ae447f680d488d230e735" />
     </application>
 
 </manifest>
