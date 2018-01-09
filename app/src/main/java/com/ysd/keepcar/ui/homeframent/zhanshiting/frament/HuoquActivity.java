@@ -9,7 +9,7 @@ import com.ysd.keepcar.R;
 public class HuoquActivity extends AppCompatActivity {
     private ViewPager mViewPager;
 
-    @Override
+       @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_huoqu);

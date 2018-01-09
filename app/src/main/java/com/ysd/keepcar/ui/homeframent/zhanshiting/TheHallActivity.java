@@ -26,7 +26,7 @@ public class TheHallActivity extends BaseActivity implements View.OnClickListene
     private ThellFragment thellFragment;
     private ArrayList<Fragment> list;
     @Override
-    protected int getLayoutId() {
+        protected int getLayoutId() {
         return R.layout.activity_the_hall;
     }
 

@@ -700,7 +700,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
     hua_queding =    (Button)   right.findViewById(R.id.hua_queding);
         hua_quxiao=  (Button) right.findViewById(R.id.hua_quxiao);
      hua_queding.setOnClickListener(this);
-     hua_quxiao.setOnClickListener(this);
+         hua_quxiao.setOnClickListener(this);
 
 
     }

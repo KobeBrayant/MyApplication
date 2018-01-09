@@ -129,7 +129,7 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+               public void onResponse(Call call, Response response) throws IOException {
                 final String string1 = response.body().string();
              getActivity().runOnUiThread(new Runnable() {
                  @Override

@@ -48,7 +48,7 @@
         android:id="@+id/right"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="right">
+         android:layout_gravity="right">
       <include layout="@layout/popupwindow_itme" ></include>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

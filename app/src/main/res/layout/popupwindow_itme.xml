@@ -865,10 +865,10 @@
             android:layout_weight="1"
             android:background="#ffb900"
             />
-        <Button
-            android:id="@+id/hua_queding"
+          <Button
+             android:id="@+id/hua_queding"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+              android:layout_height="50dp"
             android:text="确定"
             android:textColor="#fcd9b0"
             android:textSize="22sp"
