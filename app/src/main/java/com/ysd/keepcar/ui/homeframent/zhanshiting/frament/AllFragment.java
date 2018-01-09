@@ -53,8 +53,11 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
 
     @Override
     protected void init(View view) {
+
         dropdownButton1 = (TextView) view.findViewById(R.id.time1);
+        dropdownButton1.setText("品牌");
         dropdownButton2 = (DropdownButton) view.findViewById(R.id.time2);
+        dropdownButton2.setText("排序");
         initSomeData();
         dropdownButton2.setData(types);
     }
@@ -65,7 +68,7 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
 //        times.add(new DropBean("品牌"));
 //        times.add(new DropBean("品牌不限"));
 
-        types.add(new DropBean("排序"));
+
         types.add(new DropBean("默认排序"));
         types.add(new DropBean("试驾最多"));
     }

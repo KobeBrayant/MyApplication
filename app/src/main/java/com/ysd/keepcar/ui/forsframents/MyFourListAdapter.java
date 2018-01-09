@@ -21,6 +21,7 @@ import java.util.List;
  */
 
 class MyFourListAdapter extends BaseAdapter {
+
     Context context;
     List<FourBean> Flist;
 

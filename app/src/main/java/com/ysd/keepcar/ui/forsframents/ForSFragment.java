@@ -35,6 +35,7 @@ public class ForSFragment extends BaseFragMent {
         return R.layout.fragment_for;
     }
 
+
     @Override
     protected void init(View view) {
         dropdownButton1 = (DropdownButton) view.findViewById(R.id.time1);

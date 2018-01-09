@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
-android:background="#00000000"
     android:orientation="vertical">
 <TextView
       android:id="@+id/My_EWM"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="25px"
+    android:layout_height="0px"
+    android:layout_weight="1"
+    android:layout_marginTop="35px"
     android:textSize="30px"
     android:padding="10px"
     android:textColor="#ef81"
@@ -21,7 +20,8 @@ android:background="#00000000"
 <TextView
     android:id="@+id/My_SYS"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="0px"
+    android:layout_weight="1"
     android:padding="10px"
     android:textSize="30px"
     android:textColor="#999"
