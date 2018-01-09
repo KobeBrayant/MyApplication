@@ -734,8 +734,8 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
                     dbl.openDrawer(right);
                 }
             }
-        });
-           dropdownButton1.setOnClickListener(new View.OnClickListener() {
+            });
+               dropdownButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 View vicinityView = LayoutInflater.from(getActivity()).inflate(R.layout.shop_popup_window1, null);
