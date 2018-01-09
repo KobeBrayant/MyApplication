@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--android:background="@mipmap/foursfindbian"-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/popup_baoyang"
+    android:layout_marginLeft="40px">
+    <ImageView
+        android:layout_width="70px"
+        android:layout_height="40px"
+        android:src="@mipmap/maintenance"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保养"
+        android:textSize="@dimen/txt_20"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/popup_weixiu"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="40px">
+        <ImageView
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:src="@mipmap/weixiu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="维修"
+            android:textSize="@dimen/txt_20"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/popup_yuyue"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="40px">
+        <ImageView
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:src="@mipmap/appointment"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约"
+            android:textSize="@dimen/txt_20"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/popup_xubao"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="40px">
+        <ImageView
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:src="@mipmap/renewal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="续保"
+            android:textSize="@dimen/txt_20"/>
+    </LinearLayout>
 </LinearLayout>

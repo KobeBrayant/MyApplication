@@ -399,4 +399,8 @@
     <color name="grey_color3">#999999</color>
     <!-- 橙色 -->
     <color name="orange_color">#de6838</color>
+
+    <color name="grey_600">#ff757575</color>
+    <color name="link_text_dark">#5c5cff</color>
+
 </resources>

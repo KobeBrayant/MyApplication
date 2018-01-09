@@ -44,6 +44,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
     private LinearLayout btn_find;
     private LinearLayout btn_daohang;
     private PopupWindow popupWindow;
+    private PopupWindow popupWindow1;
 
     @Override
     protected int getLayoutId() {
@@ -70,6 +71,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         btn_find = (LinearLayout)findViewById(R.id.btn_find);
         btn_daohang = (LinearLayout)findViewById(R.id.btn_daohang);
 
+        btn_bendianzhanghu.setOnClickListener(this);
         btn_find.setOnClickListener(this);
         btn_daohang.setOnClickListener(this);
         image_return.setOnClickListener(this);
@@ -83,6 +85,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         list.add("新车");
         list.add("二手车");
         list.add("积分商场");
+        list.add("洗车");
 
         ArrayList<Fragment> fragmentslist = new ArrayList<>();
         Boutique_Fragment boutique_fragment = new Boutique_Fragment();
@@ -122,7 +125,9 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
             //本店账户
             case R.id.btn_bendianzhanghu:
 
-                startActivity(new Intent(Four_s_ShopActivity.this, Shop_DetailsActivity.class));
+//                startActivity(new Intent(Four_s_ShopActivity.this, Shop_DetailsActivity.class));
+                View shop_account_popupwindow = LayoutInflater.from(Four_s_ShopActivity.this).inflate(R.layout.shop_account_popupwindow,null);
+                Find_Popuwindow(shop_account_popupwindow);
                 break;
 
             //发现
@@ -139,6 +144,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
     private void Find_Popuwindow(View shop_find_popuwindow) {
 
         popupWindow = new PopupWindow(shop_find_popuwindow, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
         shop_find_popuwindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,5 +157,20 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.showAsDropDown(btn_find, 0, 20);
 
+    }
+
+    private void Account_Popupwindow(View shop_account_popupwindow){
+        popupWindow1 = new PopupWindow(shop_account_popupwindow, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        shop_account_popupwindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindow1.dismiss();
+            }
+        });
+        popupWindow1.setFocusable(true);
+        popupWindow1.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow1.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow1.setBackgroundDrawable(new BitmapDrawable());
+        popupWindow1.showAsDropDown(btn_bendianzhanghu,0,100);
     }
 }
