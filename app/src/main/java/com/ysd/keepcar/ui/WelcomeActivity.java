@@ -113,7 +113,6 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
         fragmentTransaction.commit();
     }
 
-
     @Override
     protected void initData() {
 
