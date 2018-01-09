@@ -5,6 +5,7 @@ package com.ysd.keepcar.ui.forsframents;
  */
 
 public class FourBean {
+
     private int img;
     private String name;
 

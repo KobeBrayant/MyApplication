@@ -113,7 +113,9 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
     protected void init(View view) {
         dropdownButton1 = (TextView) view.findViewById(R.id.time1);
         dropdownButton2 = (DropdownButton) view.findViewById(R.id.time2);
+        dropdownButton2.setText("4S店不限");
         dropdownButton3 = (DropdownButton) view.findViewById(R.id.time3);
+        dropdownButton3.setText("排序");
         shaixuan_btn =  (TextView) view.findViewById(R.id.shaixuan_btn);
        dbl = (DrawerLayout) view.findViewById(R.id.drawerlayout);
         //侧滑的id
@@ -713,11 +715,11 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
         orings = new ArrayList<>();
 
 
-        types.add(new DropBean("4S店不限"));
+
         types.add(new DropBean("全部会员店"));
         types.add(new DropBean("某某某会员店"));
 
-        orings.add(new DropBean("排序"));
+
         orings.add(new DropBean("综合排序"));
         orings.add(new DropBean("价格最低"));
         orings.add(new DropBean("车龄最小"));

@@ -62,6 +62,7 @@ public class JingpinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jingpin);
         initview();
+
     }
 
     private void initview() {

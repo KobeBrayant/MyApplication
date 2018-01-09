@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JifenActivity extends AppCompatActivity {
+
     private DropdownButton dropdownButton1;
     private DropdownButton dropdownButton2;
     private DropdownButton dropdownButton3;
@@ -53,6 +54,7 @@ public class JifenActivity extends AppCompatActivity {
     }
 
     private void initview() {
+
         title_fan = (ImageView) findViewById(R.id.title_fanhui);
         dropdownButton1 = (DropdownButton) findViewById(R.id.time1);
         dropdownButton1.setText("分类不限");
