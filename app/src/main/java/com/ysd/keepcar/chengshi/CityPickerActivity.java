@@ -82,11 +82,11 @@ public class CityPickerActivity extends CheckPermissionsActivity implements View
                         String district = aMapLocation.getDistrict();
                         String location = StringUtils.extractLocation(city, district);
                         mCityAdapter.updateLocateState(LocateState.SUCCESS, location);
-
+Log.e("as",city);
                     } else {
                         //定位失败
                        Log.e("----", aMapLocation.getErrorCode()+"bbb");
-                        Log.e("--------",mLocationClient.toString());
+                        Log.e("----1111----",mLocationClient.getLastKnownLocation().getAddress()+"0000");
                         mCityAdapter.updateLocateState(LocateState.FAILED, null);
                     }
                 }

@@ -721,7 +721,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
         orings.add(new DropBean("综合排序"));
         orings.add(new DropBean("价格最低"));
         orings.add(new DropBean("车龄最小"));
-        orings.add(new DropBean("里程最少"));
+         orings.add(new DropBean("里程最少"));
 
     }
 
@@ -735,7 +735,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
                 }
             }
         });
-        dropdownButton1.setOnClickListener(new View.OnClickListener() {
+           dropdownButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 View vicinityView = LayoutInflater.from(getActivity()).inflate(R.layout.shop_popup_window1, null);
@@ -759,7 +759,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
 
         popupWindow.setTouchable(true);
 
-        popupWindow.setAnimationStyle(R.style.AnimationTopFade); // 设置动画
+           popupWindow.setAnimationStyle(R.style.AnimationTopFade); // 设置动画
 
         popupWindow.showAsDropDown(dropdownButton1, 0, 0);
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -775,7 +775,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
         WaveSideBar waveSideBar = (WaveSideBar) vicinityView.findViewById(R.id.waveSideBar);
         waveSideBar.setTextColor(Color.BLACK);
         waveSideBar.setMaxOffset(10);//字母偏移量
-        waveSideBar.setPosition(WaveSideBar.POSITION_RIGHT);//侧边栏在左边还是右边
+           waveSideBar.setPosition(WaveSideBar.POSITION_RIGHT);//侧边栏在左边还是右边
         waveSideBar.setLazyRespond(true);//false:列表随侧边栏的滚动滚动
         waveSideBar.setOnSelectIndexItemListener(this);
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -785,8 +785,8 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
                 .url("http://39.106.173.47:8080/app/carBrand/querySubBrand.do")
                 .post(requestBody)
                 .build();
-        Call call = okHttpClient.newCall(request);
-        call.enqueue(new Callback() {
+             Call call = okHttpClient.newCall(request);
+            call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
