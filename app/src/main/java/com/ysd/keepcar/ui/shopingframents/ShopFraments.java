@@ -4,6 +4,8 @@ package com.ysd.keepcar.ui.shopingframents;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -367,6 +369,8 @@ public class ShopFraments extends BaseFragMent implements ShopcartAdapter.CheckI
                     return;
                 }
                startActivity(new Intent(getActivity(), ShowzhiActivity.class));
+               //startActivity(new Intent(getActivity(), ShouhuoActivity.class));
+
 
 //                alert = new AlertDialog.Builder(context).create();
 //                alert.setTitle("操作提示");
@@ -425,14 +429,14 @@ public class ShopFraments extends BaseFragMent implements ShopcartAdapter.CheckI
         selva.notifyDataSetChanged();
     }
 
-//    Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            super.handleMessage(msg);
-// eq           //删除购物车后动态改变数量
-//            setCartNum();
-//        }
-//    };
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+       //删除购物车后动态改变数量
+            setCartNum();
+        }
+    };
 
     @Override
     public void onDestroy() {

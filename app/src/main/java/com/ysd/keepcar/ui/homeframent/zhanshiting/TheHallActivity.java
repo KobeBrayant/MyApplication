@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class TheHallActivity extends BaseActivity implements View.OnClickListener {
 
-       private TextView title_biao;
+   private TextView title_biao;
     private TextView xincar_o;
     private TextView ershou_o;
     private FrameLayout frameLayout;
@@ -26,7 +26,7 @@ public class TheHallActivity extends BaseActivity implements View.OnClickListene
     private ThellFragment thellFragment;
     private ArrayList<Fragment> list;
     @Override
-    protected int getLayoutId() {
+        protected int getLayoutId() {
         return R.layout.activity_the_hall;
     }
 

@@ -7,10 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="style_pop_animation">
         <item name="android:windowEnterAnimation">@anim/anim_pop_in</item>
         <item name="android:windowExitAnimation">@anim/anim_pop_out</item>
     </style>
+
     <style name="TabBtn">
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">0dp</item>
@@ -51,4 +53,8 @@
         <item name="android:textColor">@color/cp_gray</item>
         <item name="android:background">@color/cp_colorAccent</item>
     </style>
+
+    <style name="CityPicker.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="CityPicker.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
