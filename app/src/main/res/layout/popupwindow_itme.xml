@@ -54,7 +54,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/hb"
+                android:id="@+id/hua_liangxiang"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -75,7 +75,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/sedan_car"
+                android:id="@+id/hua_sanxiang"
                 android:layout_width="65dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -96,7 +96,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/suv"
+                android:id="@+id/hua_suv"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -119,7 +119,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/mpv"
+                android:id="@+id/hua_mvp"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -154,7 +154,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/sports_car"
+                android:id="@+id/hua_paocar"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -176,7 +176,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/pick_up"
+                android:id="@+id/hua_pika"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -198,7 +198,7 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:id="@+id/minibus"
+                android:id="@+id/hua_mianbao"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -221,7 +221,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/other"
+                android:id="@+id/hua_qitache"
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:src="@mipmap/ic_launcher"
@@ -269,7 +269,7 @@
 <RadioButton
 
     android:layout_marginLeft="20dp"
-    android:id="@+id/NIEH"
+    android:id="@+id/hua_guoer"
     android:button="@null"
     android:layout_width="110dp"
     android:layout_height="50dp"
@@ -277,35 +277,35 @@
     android:text="国二及以上"
     android:textColor="#aaa6a6"
     android:checked="true"
-    android:background="@drawable/bg_welcome"
+    android:background="@drawable/selector_speed_borrow_select_day"
     android:textSize="16sp"
     android:layout_weight="1"
     />
 
         <RadioButton
-            android:id="@+id/three"
+            android:id="@+id/hua_guosan"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_welcome"
+            android:background="@drawable/selector_speed_borrow_select_day"
             android:button="@null"
-            android:checked="true"
+
             android:gravity="center"
             android:text="国三及以上"
             android:textColor="#aaa6a6"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/National_IV_Standard"
+            android:id="@+id/hua_guosi"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_welcome"
+            android:background="@drawable/selector_speed_borrow_select_day"
             android:button="@null"
-            android:checked="true"
+
             android:gravity="center"
             android:text="国四及以上"
             android:textColor="#aaa6a6"
@@ -321,30 +321,30 @@
 
     <RadioButton
         android:layout_marginLeft="20dp"
-        android:id="@+id/RIMBA_JIMBARAN_BAY"
+        android:id="@+id/hua_guowu"
         android:button="@null"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:gravity="center"
-        android:checked="true"
+
         android:text="国五"
         android:textColor="#aaa6a6"
-        android:background="@drawable/bg_welcome"
+        android:background="@drawable/selector_speed_borrow_select_day"
         android:textSize="16sp"
         android:layout_weight="1"
         />
 
     <RadioButton
         android:layout_marginLeft="20dp"
-        android:id="@+id/ETC"
+        android:id="@+id/hua_qita"
         android:button="@null"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:gravity="center"
-        android:checked="true"
+
         android:text="其他"
         android:textColor="#aaa6a6"
-        android:background="@drawable/bg_welcome"
+        android:background="@drawable/selector_speed_borrow_select_day"
         android:textSize="16sp"
         android:layout_weight="1"
         />
@@ -356,7 +356,7 @@
         android:gravity="center"
         android:text="其他"
         android:textColor="#aaa6a6"
-        android:background="@drawable/bg_welcome"
+        android:background="@drawable/selector_speed_borrow_select_day"
         android:textSize="16sp"
         android:layout_weight="1"
         android:visibility="invisible"
@@ -392,27 +392,28 @@
         >
         <RadioButton
             android:layout_marginLeft="20dp"
-            android:id="@+id/MTM"
+            android:id="@+id/hua_shoudong"
             android:button="@null"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="手动"
+            android:checked="true"
             android:textColor="#aaa6a6"
-            android:background="@drawable/bg_welcome"
+            android:background="@drawable/selector_speed_borrow_select_day"
             android:textSize="16sp"
             android:layout_weight="1"
             />
         <RadioButton
             android:layout_marginLeft="20dp"
-            android:id="@+id/ATM"
+            android:id="@+id/hua_zidong"
             android:button="@null"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="自动"
             android:textColor="#aaa6a6"
-            android:background="@drawable/bg_welcome"
+            android:background="@drawable/selector_speed_borrow_select_day"
             android:layout_weight="1"
             android:textSize="16sp"
             />
@@ -420,14 +421,14 @@
         <RadioButton
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/Manumatic"
+            android:id="@+id/hua_shouzi"
             android:button="@null"
             android:layout_width="110dp"
             android:layout_height="50dp"
             android:gravity="center"
             android:text="手自一体"
             android:textColor="#aaa6a6"
-            android:background="@drawable/bg_welcome"
+            android:background="@drawable/selector_speed_borrow_select_day"
             android:layout_weight="1"
             android:textSize="16sp"
             />
@@ -458,28 +459,29 @@
             >
 
             <RadioButton
+                android:checked="true"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Sub_yidianlin_litre"
+                android:id="@+id/hua_pai1"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="1.0L以下"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Sub_yidianliu_litre"
+                android:id="@+id/hua_pai2"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="1.0-1.6L"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -487,14 +489,14 @@
             <RadioButton
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Sub_erdianlin_litre"
+                android:id="@+id/hua_paisan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="1.6-2.0L"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -509,28 +511,28 @@
             >
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Sub_sandianlin_litre"
+                android:id="@+id/hua_paisi"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="2.0-3.0L"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
 
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Sub_sandianlins_litre"
+                android:id="@+id/hua_paiwu"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="3.0L"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
@@ -542,7 +544,7 @@
                 android:gravity="center"
                 android:text="其他"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:visibility="invisible"
@@ -579,28 +581,29 @@
             >
 
             <RadioButton
+                android:checked="true"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/thirty_thousand"
+                android:id="@+id/hua_sanwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="3万以下"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Goman"
+                android:id="@+id/hua_wuwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="3-5万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -608,14 +611,14 @@
             <RadioButton
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Seventy_thousand"
+                android:id="@+id/hua_qiwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="5-7万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -631,27 +634,27 @@
             >
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/Ninety_thousand"
+                android:id="@+id/hua_jiuwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="7-9万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/twenty_thousand"
+                android:id="@+id/hua_shierwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="9-12万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -659,14 +662,14 @@
             <RadioButton
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/sixty_thousand"
+                android:id="@+id/hua_shiliuwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="12-16万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -682,27 +685,27 @@
             >
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/two_hundred"
+                android:id="@+id/hua_ershiwan"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="16-20万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/twenty"
+                android:id="@+id/hua_ershiyishang"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="20万"
+                android:text="20万以上"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -716,7 +719,7 @@
                 android:gravity="center"
                 android:text="12-16万"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:visibility="invisible"
@@ -751,28 +754,29 @@
             android:orientation="horizontal"
             >
             <RadioButton
+                android:checked="true"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/year"
+                android:id="@+id/hua_yinian"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="1年以内"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/triennium"
+                android:id="@+id/hua_liangnian"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="2年以内"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -780,14 +784,14 @@
             <RadioButton
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/five_years"
+                android:id="@+id/hua_sanian"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="3年以内"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -802,27 +806,27 @@
             >
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/seven_years"
+                android:id="@+id/hua_wunian"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="5年以内"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:textSize="16sp"
                 android:layout_weight="1"
                 />
             <RadioButton
                 android:layout_marginLeft="20dp"
-                android:id="@+id/ten_years"
+                android:id="@+id/hua_qinian"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="7年以内"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -830,14 +834,14 @@
             <RadioButton
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/More_than_a_decade"
+                android:id="@+id/hua_qinianshang"
                 android:button="@null"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="7年以上"
                 android:textColor="#aaa6a6"
-                android:background="@drawable/bg_welcome"
+                android:background="@drawable/selector_speed_borrow_select_day"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 />
@@ -852,7 +856,7 @@
         android:orientation="horizontal"
         >
         <Button
-            android:id="@+id/cancel"
+            android:id="@+id/hua_quxiao"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="取消"
@@ -862,7 +866,7 @@
             android:background="#ffb900"
             />
         <Button
-            android:id="@+id/confirm"
+            android:id="@+id/hua_queding"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="确定"

@@ -64,7 +64,8 @@
         <!-- 82c981c9708542f03014071eb7bddd5f -->
 
         <service android:name="com.amap.api.location.APSService" />
-<activity android:name=".ui.forsframents.Four_s_ShopActivity"/>
+
+        <activity android:name=".ui.forsframents.Four_s_ShopActivity" />
         <activity android:name=".ui.jifen.JifenActivity" />
         <activity android:name=".ui.homeframent.jingpin.JingpinActivity" />
         <activity android:name=".ui.jifen.XiangqingActivity" />
@@ -76,11 +77,16 @@
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="82c981c9708542f03014071eb7bddd5f"></meta-data>
+            android:value="82c981c9708542f03014071eb7bddd5f" />
 
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".ui.homeframent.xubao.XubaoActivity"></activity>
+        <activity android:name=".ui.homeframent.xubao.XubaoActivity" />
+        <activity
+            android:name=".ui.homeframent.zhanshiting.frament.HuoquActivity"
+            android:label="@string/title_activity_huoqu"
+            android:theme="@style/CityPicker.NoActionBar" />
+        <activity android:name=".ui.shopingframents.activity.ShouhuoActivity"></activity>
     </application>
 
 </manifest>

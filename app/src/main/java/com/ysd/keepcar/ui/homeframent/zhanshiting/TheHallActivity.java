@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class TheHallActivity extends BaseActivity implements View.OnClickListener {
 
-       private TextView title_biao;
+   private TextView title_biao;
     private TextView xincar_o;
     private TextView ershou_o;
     private FrameLayout frameLayout;
