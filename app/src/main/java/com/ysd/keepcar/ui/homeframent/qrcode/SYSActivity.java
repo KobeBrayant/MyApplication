@@ -1,6 +1,7 @@
 package com.ysd.keepcar.ui.homeframent.qrcode;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -39,6 +40,7 @@ public class SYSActivity extends Activity implements View.OnClickListener,Decora
         captureManager.initializeFromIntent(getIntent(), savedInstanceState);
         captureManager.decode();
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -77,13 +79,14 @@ public class SYSActivity extends Activity implements View.OnClickListener,Decora
     }
 
 
-//TODO 返回值
+////TODO 返回值
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
 //        if(resultCode==RESULT_OK){
 //            Bundle bundle = data.getExtras();
 //            String result = bundle.getString("result");
+//
 //            tvResult.setText(result);
 //        }
 //    }
@@ -100,7 +103,7 @@ public class SYSActivity extends Activity implements View.OnClickListener,Decora
                 }
 
 //                    //TODO 跳转识别扫一扫
-//                startActivity(new Intent(this,CaptureActivity.class));
+
                 break;
 
         }

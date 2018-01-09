@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ysd.keepcar.R;
 
@@ -74,12 +75,9 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
             return;
         }
         drops = dropBeans;
-//        text.setTextSize(24);
-//        drops.get(0).setChoiced(true);
-//        text.setText(drops.get(0).getName());
         text.setTextSize(21);
         drops.get(0).setChoiced(true);
-        text.setText(drops.get(0).getName());
+//        text.setText(drops.get(0).getName());
         selectPosition = 0;
         View view = LayoutInflater.from(mContext).inflate(R.layout.dropdown_content, null);
         view.findViewById(R.id.content).setOnClickListener(new OnClickListener() {
@@ -101,7 +99,9 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
 
     public void setText(CharSequence content) {
         text.setText(content);
+
     }
+
     /**
      * 根据传过来的参数改变状态
      * @param checked
@@ -150,6 +150,7 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
         drops.get(selectPosition).setChoiced(false);
         drops.get(position).setChoiced(true);
 //        text.setText(drops.get(position).getName());
+        Toast.makeText(mContext,"点到第"+position+"个",Toast.LENGTH_SHORT).show();
         adapter.notifyDataSetChanged();
         selectPosition = position;
         popWinDownUtil.hide();
@@ -200,12 +201,7 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
                 holder = (ViewHolder) convertView.getTag();
             }
             holder.tv.setText(drops.get(position).getName());
-//            convertView.setOnClickListener(new OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Toast.makeText(context,drops.get(position).getName(),Toast.LENGTH_SHORT).show();
-//                }
-//            });
+//
             holder.tv.setTextSize(20);
             if(drops.get(position).isChoiced()){
                 holder.tig.setVisibility(VISIBLE);

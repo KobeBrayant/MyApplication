@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class XiCarActivity extends AppCompatActivity {
 
-      private TextView titlebiao;
+    private TextView titlebiao;
     private ImageView title_fanhui;
     private ImageView title_fan;
     private DropdownButton dropdownButton1;
@@ -28,22 +28,23 @@ public class XiCarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xi_car);
-  initview();
-  initdata();
-  initload();
+        initview();
+        initdata();
+        initload();
     }
 
     private void initload() {
-       gridview_xiche =   (GridView) findViewById(R.id.gridview);
+        gridview_xiche = (GridView) findViewById(R.id.gridview);
 
 
     }
 
     private void initdata() {
-        title_fan =  (ImageView) findViewById(R.id.title_fanhui);
+        title_fan = (ImageView) findViewById(R.id.title_fanhui);
         dropdownButton1 = (DropdownButton) findViewById(R.id.time1);
+        dropdownButton1.setText("店面");
         dropdownButton2 = (DropdownButton) findViewById(R.id.time2);
-
+        dropdownButton2.setText("排序");
         initSomeData();
         dropdownButton1.setData(times);
         dropdownButton2.setData(types);
@@ -61,7 +62,7 @@ public class XiCarActivity extends AppCompatActivity {
         times = new ArrayList<>();
         types = new ArrayList<>();
 
-        times.add(new DropBean("店面"));
+
         times.add(new DropBean("店面不限"));
         times.add(new DropBean("全部洗车店"));
         times.add(new DropBean("全部会员店"));
@@ -69,7 +70,6 @@ public class XiCarActivity extends AppCompatActivity {
         times.add(new DropBean("历史下单店"));
 
 
-        types.add(new DropBean("排序"));
         types.add(new DropBean("默认排序"));
         types.add(new DropBean("距离最短"));
         types.add(new DropBean("评价最高"));
@@ -79,15 +79,15 @@ public class XiCarActivity extends AppCompatActivity {
 
 
     private void initview() {
-       titlebiao = (TextView) findViewById(R.id.title_biao);
-       title_fanhui = (ImageView) findViewById(R.id.title_fanhui);
-       titlebiao.setText("洗车");
-       title_fanhui.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               finish();
-           }
-       });
+        titlebiao = (TextView) findViewById(R.id.title_biao);
+        title_fanhui = (ImageView) findViewById(R.id.title_fanhui);
+        titlebiao.setText("洗车");
+        title_fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
 }

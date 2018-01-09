@@ -2,6 +2,7 @@ package com.ysd.keepcar.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.GridView;
 
 import com.ysd.keepcar.R;

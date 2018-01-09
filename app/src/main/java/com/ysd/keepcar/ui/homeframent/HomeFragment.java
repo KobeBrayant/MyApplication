@@ -423,6 +423,7 @@ startActivity(new Intent(getActivity(), XiCarActivity.class));
         myRWM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //生成二维码
                 getActivity().startActivity(new Intent(getActivity(),EWMActivity.class));
                 window.dismiss();
             }
@@ -430,6 +431,7 @@ startActivity(new Intent(getActivity(), XiCarActivity.class));
         mySYS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //二维码解析
                 getActivity().startActivity(new Intent(getActivity(),SYSActivity.class));
                 window.dismiss();
             }

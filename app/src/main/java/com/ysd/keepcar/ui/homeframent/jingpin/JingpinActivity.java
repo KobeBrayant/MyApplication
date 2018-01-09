@@ -32,14 +32,14 @@ public class JingpinActivity extends AppCompatActivity {
     private List<DropBean> types;
     private List<DropBean> names;
 
-     private PopupWindow mPopupWindow;
-    private String[] roots = new String[] { "装饰", "装饰", "装饰","汽车用品", "汽车用品"};
-    private String[][] sub_items = new String[][] {
-            new String[] { "挂件", "挂件", "挂件", "挂件", "挂件" },
-            new String[] { "挂件", "挂件", "挂件", "挂件", "挂件" },
-            new String[] { "挂件", "挂件", "挂件", "挂件", "挂件" },
-            new String[] { "汽车用品", "汽车用品", "汽车用品", "汽车用品", "汽车用品" },
-            new String[] { "汽车用品", "汽车用品", "汽车用品", "汽车用品", "汽车用品" }};
+    private PopupWindow mPopupWindow;
+    private String[] roots = new String[]{"装饰", "装饰", "装饰", "汽车用品", "汽车用品"};
+    private String[][] sub_items = new String[][]{
+            new String[]{"挂件", "挂件", "挂件", "挂件", "挂件"},
+            new String[]{"挂件", "挂件", "挂件", "挂件", "挂件"},
+            new String[]{"挂件", "挂件", "挂件", "挂件", "挂件"},
+            new String[]{"汽车用品", "汽车用品", "汽车用品", "汽车用品", "汽车用品"},
+            new String[]{"汽车用品", "汽车用品", "汽车用品", "汽车用品", "汽车用品"}};
     /**
      * 弹出的popupWindow布局
      */
@@ -59,18 +59,21 @@ public class JingpinActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-           super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jingpin);
         initview();
     }
 
     private void initview() {
-        title_fan =  (ImageView) findViewById(R.id.title_fanhui);
-      title_biao =  (TextView) findViewById(R.id.title_biao);
+        title_fan = (ImageView) findViewById(R.id.title_fanhui);
+        title_biao = (TextView) findViewById(R.id.title_biao);
         title_biao.setText("4S店精品");
-      dropdownButton1 = (DropdownButton) findViewById(R.id.time1);
+        dropdownButton1 = (DropdownButton) findViewById(R.id.time1);
+        dropdownButton1.setText("分类");
         dropdownButton2 = (DropdownButton) findViewById(R.id.time2);
+        dropdownButton2.setText("店面不限");
         dropdownButton3 = (DropdownButton) findViewById(R.id.time3);
+        dropdownButton3.setText("默认排序");
 
         initSomeData();
         dropdownButton1.setData(times);
@@ -88,7 +91,7 @@ public class JingpinActivity extends AppCompatActivity {
                 showPopBtn(ScreenUtils.getScreenWidth(JingpinActivity.this),
                         ScreenUtils.getScreenHeight(JingpinActivity.this));
             }
-    });
+        });
 
     }
 
@@ -165,18 +168,18 @@ public class JingpinActivity extends AppCompatActivity {
                         subLayout.setVisibility(View.VISIBLE);
                         subListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                                    @Override
-                                    public void onItemClick(
-                                            AdapterView<?> parent, View view,
-                                            int position, long id) {
-                                        // TODO Auto-generated method stub
-                                        popupLayout.setVisibility(View.GONE);
-                                        Toast.makeText(
-                                                JingpinActivity.this,
-                                                sub_items[selectedPosition][position],
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-                                });
+                            @Override
+                            public void onItemClick(
+                                    AdapterView<?> parent, View view,
+                                    int position, long id) {
+                                // TODO Auto-generated method stub
+                                popupLayout.setVisibility(View.GONE);
+                                Toast.makeText(
+                                        JingpinActivity.this,
+                                        sub_items[selectedPosition][position],
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                     }
                 });
