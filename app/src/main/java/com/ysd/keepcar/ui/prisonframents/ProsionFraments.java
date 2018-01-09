@@ -2,106 +2,90 @@ package com.ysd.keepcar.ui.prisonframents;
 
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.loginmodoule.LoginActivity;
-import com.ysd.keepcar.utils.SharedPreferencesUtils;
+import com.ysd.keepcar.ui.myview.CircleImageView;
+import com.ysd.keepcar.ui.prisonframents.adapter.ProsionFragmentAdapter;
+import com.ysd.keepcar.ui.prisonframents.smallfragment.JiFenFragment;
 
+import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProsionFraments extends BaseFragMent {
-    private PopupWindow mPopWindow;
-    private ImageView menu_login;
-    private View inflate;
-    private ImageView icon_login;
-    private TextView loginName;
+
+
+    private CircleImageView icon_login;
+    private TextView name_login;
+    private TextView my_dingdan;
+    private RadioButton daifukuan_rabtn;
+    private RadioButton daishigong_rabtn;
+    private RadioButton daifahuo_rabtn;
+    private RadioButton daishouhuo_rabtn;
+    private RadioButton daipingjia_rabtn;
+    private RadioGroup group_dingdan;
+    private ImageView mycars_img;
+    private RelativeLayout my_car;
+    private TextView current_car;
+    private ImageView img_go;
+    private TextView current_cars;
+    private RelativeLayout dangqian_car;
+    private TextView current_dianmian;
+    private ImageView img_gos;
+    private TextView dianmian_current;
+    private RadioButton jifen_btn;
+    private RadioButton xiangmu_btn;
+    private RadioButton chuzhi_btn;
+    private RadioButton xiche_btn;
+    private RadioButton yuequan_btn;
+    private RadioButton jibiezhekou_btn;
+    private RadioButton dingequan_btn;
+    private RadioGroup rid_group;
+    private FrameLayout frag_zhanghu;
+    private ViewPager prosion_viewpager;
+    private ArrayList<Fragment> fragmentArrayList;
 
     @Override
     protected int getLayoutId() {
         return R.layout.prosion_fragmentl;
     }
-
     @Override
     protected void init(View view) {
-        //menu_login = view.findViewById(R.id.menu_login);
- /*       icon_login = view.findViewById(R.id.icon_login);
-        loginName = view.findViewById(R.id.name_login);
-
-        inflate = LayoutInflater.from(getActivity()).inflate(R.layout.loginpopupwindow, null);
-*/
+        icon_login=view.findViewById(R.id.icon_login);
+        prosion_viewpager = view.findViewById(R.id.prosion_viewpager);
     }
-
     @Override
     protected void loadData() {
-     /*   menu_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopWindow(inflate);
-            }
-        });
         icon_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent=new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
         });
-    }*/
-
- /*private void showPopWindow(View view) {
-
-     try {
-
-         mPopWindow = new PopupWindow(view,200,
-                250);
-         mPopWindow.setFocusable(true);
-         mPopWindow.setOutsideTouchable(true);
-         ColorDrawable cd = new ColorDrawable(0x00ffffff);// 背景颜色全透明
-         mPopWindow.setBackgroundDrawable(cd);
-         mPopWindow.setAnimationStyle(R.style.style_pop_animation);// 动画效果必须放在showAsDropDown()方法上边，否则无效
-         mPopWindow.showAsDropDown(menu_login,0,10);
-
-         mPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-
-             @Override
-             public void onDismiss() {
-                 mPopWindow = null;// 当点击屏幕时，使popupWindow消失
-                 backgroundAlpha(1.0f);// 当点击屏幕时，使半透明效果取消
-             }
-         });
+        fragmentArrayList = new ArrayList<>();
+        JiFenFragment jiFenFragment=new JiFenFragment();
+        fragmentArrayList.add(jiFenFragment);
+        ProsionFragmentAdapter adapter=new ProsionFragmentAdapter(getActivity().getSupportFragmentManager(),fragmentArrayList);
+        prosion_viewpager.setAdapter(adapter);
 
 
-     } catch (Exception e) {
-         e.printStackTrace();
-     }
 
- }
-    // 设置popupWindow背景半透明
-    public void backgroundAlpha(float bgAlpha) {
-        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
-        lp.alpha = bgAlpha;// 0.0-1.0
-        getActivity().getWindow().setAttributes(lp);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        String userphone = (String) SharedPreferencesUtils.getParam(getActivity(), "userphone", "");
-        loginName.setText(userphone);
-    }*/
     }
 }

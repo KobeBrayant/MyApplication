@@ -2,5 +2,5 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@color/white" android:state_checked="false"></item>
-    <item android:drawable="@drawable/jifen" android:state_checked="true" />
+    <item android:drawable="@color/text_sold_greay" android:state_checked="true" />
 </selector>
