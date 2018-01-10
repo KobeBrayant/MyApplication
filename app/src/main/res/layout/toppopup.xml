@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f4f6f7">
+
+    <RelativeLayout
+        android:id="@+id/qw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/y1"
+            android:id="@+id/tip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/up_arrow"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="立即登录"
+            android:textColor="@android:color/black" />
+<View
+    android:layout_below="@id/tip_text"
+    android:layout_width="match_parent"
+    android:id="@+id/vv"
+    android:layout_height="@dimen/y10"/>
+        <TextView
+            android:id="@+id/tip_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vv"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="退出登录"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/up_arrow"
+            android:layout_width="@dimen/x5"
+
+            android:layout_height="@dimen/y5"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/popup_window_arrow_up" />
+
+        <ImageView
+            android:id="@+id/down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/tip_text"
+            android:background="@drawable/down_arrow_drawable" />
+    </RelativeLayout>
+</FrameLayout>
+

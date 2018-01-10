@@ -1,13 +1,21 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context="com.ysd.keepcar.ui.prisonframents.smallfragment.JiFenFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_marginTop="@dimen/y15"
+        android:layout_width="wrap_content"
+        android:textColor="#770e0e0e"
+        android:layout_height="wrap_content"
+        android:text="当前积分" />
+    <TextView
+       android:layout_marginLeft="@dimen/y80"
+        android:layout_marginTop="@dimen/y15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#770e0e0e"
+        android:text="2000" />
+</com.zhy.autolayout.AutoLinearLayout>
