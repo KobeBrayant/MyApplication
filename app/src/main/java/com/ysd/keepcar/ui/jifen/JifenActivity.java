@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.ui.homeframent.baner.Gridgedapter;
 import com.ysd.keepcar.ui.homeframent.baner.HomeBean;
@@ -41,6 +42,7 @@ public class JifenActivity extends AppCompatActivity {
         gridview = (GridView) findViewById(R.id.gridView);
         for (int i = 0; i < 10; i++) {
             mlist.add(new HomeBean(R.mipmap.ic_launcher, R.mipmap.ic_dropdown_actived, "定制卷" + i, "回力普斯店公司", "200", "已兑2000"));
+
         }
         Gridgedapter gridgedapter = new Gridgedapter(this, mlist);
         gridview.setAdapter(gridgedapter);

@@ -79,14 +79,24 @@ public class CityPickerActivity extends CheckPermissionsActivity implements View
                 if (aMapLocation != null) {
                     if (aMapLocation.getErrorCode() == 0) {
                         String city = aMapLocation.getCity();
+
                         String district = aMapLocation.getDistrict();
                         String location = StringUtils.extractLocation(city, district);
+
                         mCityAdapter.updateLocateState(LocateState.SUCCESS, location);
-Log.e("as",city);
+                     /*   String address = aMapLocation.getAddress();
+                        String poiName = aMapLocation.getPoiName();
+                        Log.e("ass",poiName);
+                        Log.e("ass",address);
+                        Log.e("as",city);*/
                     } else {
                         //定位失败
                        Log.e("----", aMapLocation.getErrorCode()+"bbb");
                         Log.e("----1111----",mLocationClient.getLastKnownLocation().getAddress()+"0000");
+                        String address = aMapLocation.getAddress();
+                        String city = aMapLocation.getCity();
+                        Log.e("----", address+"bbaaab");
+                        Log.e("----", city+"bbaaab");
                         mCityAdapter.updateLocateState(LocateState.FAILED, null);
                     }
                 }

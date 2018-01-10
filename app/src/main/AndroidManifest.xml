@@ -23,7 +23,7 @@
     <!-- 用于申请获取蓝牙信息进行室内定位 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <!--读取外置存储卡-->
+    <!-- 读取外置存储卡 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -74,8 +74,6 @@
         <activity android:name=".ui.shopingframents.activity.ShowzhiActivity" />
         <activity android:name=".ui.homeframent.zhanshiting.TheHallActivity" />
 
-
-
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".ui.homeframent.xubao.XubaoActivity" />
@@ -83,11 +81,13 @@
             android:name=".ui.homeframent.zhanshiting.frament.HuoquActivity"
             android:label="@string/title_activity_huoqu"
             android:theme="@style/CityPicker.NoActionBar" />
-        <activity android:name=".ui.shopingframents.activity.ShouhuoActivity"></activity>
+        <activity android:name=".ui.shopingframents.activity.ShouhuoActivity" />
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="d31f7720dd1ae447f680d488d230e735" />
+
+        <activity android:name=".ui.prisonframents.activity.LoveCarActivity"></activity>
     </application>
 
 </manifest>
