@@ -98,7 +98,6 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
     @Override
     protected void init(View view) {
         viewById = view.findViewById(R.id.My_Title);
-        top_xiajian = (ImageView) view.findViewById(R.id.top_xiajian);
         top_bei = (TextView) view.findViewById(R.id.top_bei);
         top_jia = (ImageView) view.findViewById(R.id.top_jia);
         pullListView =  (ListView) view.findViewById(R.id.mVideoListView);

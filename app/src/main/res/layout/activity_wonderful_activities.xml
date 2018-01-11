@@ -177,14 +177,10 @@
     <!--</LinearLayout>-->
 
     <GridView
-        android:id="@+id/gridview"
-        android:numColumns="2"
-        android:horizontalSpacing="2dp"
-        android:verticalSpacing="2dp"
-
-        android:layout_margin="2px"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+         android:id="@+id/gridview"
+         android:numColumns="2"
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
         ></GridView>
 
 

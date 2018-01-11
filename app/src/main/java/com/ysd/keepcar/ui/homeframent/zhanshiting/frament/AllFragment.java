@@ -6,9 +6,11 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -16,14 +18,19 @@ import com.gjiazhe.wavesidebar.WaveSideBar;
 import com.google.gson.Gson;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+import com.ysd.keepcar.ui.homeframent.zhanshiting.dapter.ZhanDapter;
 import com.ysd.keepcar.ui.homeframent.zhanshiting.frament.beandapter.BranBeen;
 import com.ysd.keepcar.ui.homeframent.zhanshiting.frament.beandapter.MyBrandAdapter;
+import com.ysd.keepcar.ui.homeframent.zhanshiting.frament.beandapter.XinBean;
+import com.ysd.keepcar.utils.Cjson;
 import com.ysd.keepcar.utils.DropBean;
 import com.ysd.keepcar.utils.DropdownButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -45,6 +52,9 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
     private ArrayList<DropBean> types;
     private RecyclerView rec;
     private RecyclerView mBrandList;
+    private ListView listview_xin;
+    private List<XinBean.DataBean.ListBean> list;
+    private XinBean xinbean;
 
     @Override
     protected int getLayoutId() {
@@ -53,13 +63,57 @@ public class AllFragment extends BaseFragMent implements WaveSideBar.OnSelectInd
 
     @Override
     protected void init(View view) {
-
+       listview_xin = (ListView)  view.findViewById(R.id.listView_xin);
+       inithttp();
         dropdownButton1 = (TextView) view.findViewById(R.id.time1);
         dropdownButton1.setText("品牌");
         dropdownButton2 = (DropdownButton) view.findViewById(R.id.time2);
         dropdownButton2.setText("排序");
         initSomeData();
         dropdownButton2.setData(types);
+    }
+
+    private void inithttp() {
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Map<String, Object> map = new HashMap<>();
+        map.put("pageSize", "10");
+        map.put("brandId", "品牌不限");
+        map.put("pageNum", "0");
+        map.put("sortType", "默认排序");
+//        map.put("productType", "全部分类");
+        String mapstr = Cjson.toJSONMap(map);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), mapstr);
+        Request request = new Request.Builder()
+                .url("http://39.106.173.47:8080/app/carExhibition/newCarList.do")
+                .post(requestBody)
+                .build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("TAG", "失败啦");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String string1 = response.body().string();
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Gson gson = new Gson();
+                        xinbean = gson.fromJson(string1, XinBean.class);
+                        list = xinbean.getData().getList();
+//                        list1 = huodongBean.getData().getList();
+// ZhanBean beena=gson.fromJson(string1,ZhanBean.class);
+//                        list = beena.getData().getList();
+                        ZhanDapter  zhanDapter =  new ZhanDapter(getActivity(),list);
+                        listview_xin.setAdapter(zhanDapter);
+
+                    }
+                });
+                Log.e("TAG", "hahahah" + string1);
+            }
+        });
     }
 
     private void initSomeData() {

@@ -78,7 +78,7 @@ public class DropdownButton extends RelativeLayout implements Checkable, View.On
         drops = dropBeans;
         text.setTextSize(21);
         drops.get(0).setChoiced(true);
-//        text.setText(drops.get(0).getName());
+      text.setText(drops.get(0).getName());
         selectPosition = 0;
         View view = LayoutInflater.from(mContext).inflate(R.layout.dropdown_content, null);
         view.findViewById(R.id.content).setOnClickListener(new OnClickListener() {

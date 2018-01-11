@@ -1,16 +1,18 @@
 package com.ysd.keepcar.ui.xiche;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.GridView;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.ysd.keepcar.R;
+import com.ysd.keepcar.ui.xiche.dapter.Xicardaptero;
 import com.ysd.keepcar.utils.Cjson;
 import com.ysd.keepcar.utils.DropBean;
 import com.ysd.keepcar.utils.DropdownButton;
@@ -40,7 +42,8 @@ public class XiCarActivity extends AppCompatActivity {
     private ArrayList<DropBean> times;
     private ArrayList<DropBean> types;
     private ListView gridview_xiche;
-    private List<XiCarBean.DataBean.ListBean> xiCatlist;
+    private List<XiCarBean.DataBean.ListBean> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,19 +51,11 @@ public class XiCarActivity extends AppCompatActivity {
         initview();
         initdata();
         initload();
+        inithttp();
     }
 
-    private void initload() {
-        gridview_xiche = (ListView) findViewById(R.id.gridview);
-
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
+    private void inithttp() {
         OkHttpClient client = new OkHttpClient();
-
         Map<String,Object> kp = new HashMap<>();
         String ticket = (String) SharedPreferencesUtils.getParam(XiCarActivity.this, "ticket", "");
         kp.put("pageNum",0);
@@ -84,16 +79,41 @@ public class XiCarActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String string = response.body().string();
+                final String string = response.body().string();
                 Log.e("TTT",string);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        list = new Gson().fromJson(string, XiCarBean.class).getData().getList();
+                        gridview_xiche.setAdapter(new Xicardaptero(XiCarActivity.this,list));
 
-                List<XiCarBean.DataBean.ListBean> list = new Gson().fromJson(string, XiCarBean.class).getData().getList();
-                xiCatlist = new ArrayList<>();
-                xiCatlist.addAll(list);
-
+                    }
+                });
 
             }
         });
+    }
+
+    private void initload() {
+       gridview_xiche =   (ListView) findViewById(R.id.xiListView);
+//        List<FourBean> carlist = new ArrayList<>();
+//        for (int i = 0; i < 3; i++) {
+//            carlist.add(new FourBean(R.mipmap.ic_launcher,"公司名称"));
+//        }
+//     gridview_xiche.setAdapter(new XiCarDapter(this,carlist));
+        gridview_xiche.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(XiCarActivity.this,DetailsActivity.class));
+            }
+        });
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
 
     }
 
@@ -112,8 +132,6 @@ public class XiCarActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     private void initSomeData() {

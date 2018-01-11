@@ -3,11 +3,13 @@ package com.ysd.keepcar.ui.homeframent.jingpin;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -15,12 +17,25 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.ysd.keepcar.R;
+import com.ysd.keepcar.utils.Cjson;
 import com.ysd.keepcar.utils.DropBean;
 import com.ysd.keepcar.utils.DropdownButton;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class JingpinActivity extends AppCompatActivity {
 
@@ -56,13 +71,59 @@ public class JingpinActivity extends AppCompatActivity {
     private int selectedPosition;
     private ListView subListView;
     private TextView title_biao;
+    private GridView grideView;
+    private JingpinDapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jingpin);
         initview();
+        initdata();
+        inithttp();
+    }
 
+    private void inithttp() {
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Map<String, Object> map = new HashMap<>();
+        map.put("shopCode", "店面不限");
+        map.put("pageSize", "10");
+        map.put("pageNum", "0");
+        map.put("searchType", "销量最高");
+        String mapstr = Cjson.toJSONMap(map);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), mapstr);
+        Request request = new Request.Builder()
+                .url("http://39.106.173.47:8080/app/boutique/showProduct.do")
+                .post(requestBody)
+                .build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("TAG", "失败啦");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String string1 = response.body().string();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Gson gson = new Gson();
+                        Beena beena=gson.fromJson(string1,Beena.class);
+                        List<Beena.DataBean.ListBean> list=beena.getData().getList();
+                        Log.e("asdas",list.size()+"");
+                        myAdapter = new JingpinDapter(JingpinActivity.this, list);
+                        grideView.setAdapter(myAdapter);
+                    }
+                });
+                Log.e("TAG", "hahahah" + string1);
+            }
+        });
+    }
+
+    private void initdata() {
+     grideView =   (GridView) findViewById(R.id.gridView);
     }
 
     private void initview() {

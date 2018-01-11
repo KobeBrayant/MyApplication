@@ -76,5 +76,6 @@
             android:textSize="24px"
             android:layout_height="wrap_content" />
 
-    </RadioGroup>
+    </RadioGroup
+>
 </LinearLayout>

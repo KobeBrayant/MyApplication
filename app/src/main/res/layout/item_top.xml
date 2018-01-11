@@ -19,15 +19,6 @@
         android:layout_marginTop="11dp"
         android:text="北京" />
 
-           <ImageView
-        android:id="@+id/top_xiajian"
-        android:layout_width="20dp"
-        android:layout_height="7dp"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/top_bei"
-        android:layout_toRightOf="@+id/top_bei"
-        android:src="@mipmap/topjian" />
-
     <ImageView
         android:layout_width="75dp"
         android:layout_height="40dp"

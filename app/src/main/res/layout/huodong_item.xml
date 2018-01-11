@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="370px"
+            android:layout_height="370px"
+            android:id="@+id/item_tou" />
+
+        <ImageView
+            android:id="@+id/item_xiche1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/item_tou"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="RtlCompat" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/item_shihuo"
+        android:layout_marginLeft="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="某某某时长活动"/>
+    <LinearLayout
+        android:layout_marginLeft="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/item_chebiao"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:background="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/item_dian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宝马4S店"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/item_shijian"
+        android:layout_marginLeft="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-5-6至2018-5-6"/>
+    <RelativeLayout
+
+        android:layout_width="370px"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="5px"
+            android:layout_marginLeft="22px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="￥365"
+            android:id="@+id/item_jiaqian" />
+
+        <TextView
+            android:id="@+id/item_jinxing"
+            android:layout_margin="5px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="22px"
+            android:background="#ef8318"
+            android:text="进行中"
+            android:textSize="20sp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+
+</LinearLayout>
