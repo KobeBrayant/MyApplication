@@ -2,16 +2,33 @@ package com.ysd.keepcar.ui.xiche;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.ysd.keepcar.R;
+import com.ysd.keepcar.utils.Cjson;
 import com.ysd.keepcar.utils.DropBean;
 import com.ysd.keepcar.utils.DropdownButton;
+import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class XiCarActivity extends AppCompatActivity {
 
@@ -22,8 +39,8 @@ public class XiCarActivity extends AppCompatActivity {
     private DropdownButton dropdownButton2;
     private ArrayList<DropBean> times;
     private ArrayList<DropBean> types;
-    private GridView gridview_xiche;
-
+    private ListView gridview_xiche;
+    private List<XiCarBean.DataBean.ListBean> xiCatlist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +51,49 @@ public class XiCarActivity extends AppCompatActivity {
     }
 
     private void initload() {
-        gridview_xiche = (GridView) findViewById(R.id.gridview);
+        gridview_xiche = (ListView) findViewById(R.id.gridview);
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        OkHttpClient client = new OkHttpClient();
+
+        Map<String,Object> kp = new HashMap<>();
+        String ticket = (String) SharedPreferencesUtils.getParam(XiCarActivity.this, "ticket", "");
+        kp.put("pageNum",0);
+        kp.put("pageSize",10);
+        String s = Cjson.toJSONMap(kp);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"),s);
+        Request request = new Request.Builder()
+                .url("http://39.106.173.47:8080/app/washcar/queryWashShops.do")
+                .post(requestBody)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+
+
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("TTT",e.toString());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String string = response.body().string();
+                Log.e("TTT",string);
+
+                List<XiCarBean.DataBean.ListBean> list = new Gson().fromJson(string, XiCarBean.class).getData().getList();
+                xiCatlist = new ArrayList<>();
+                xiCatlist.addAll(list);
+
+
+            }
+        });
 
     }
 

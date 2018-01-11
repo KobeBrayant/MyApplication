@@ -53,6 +53,7 @@
             android:src="@drawable/ic_launcher_background"
             app:border_width="@dimen/y100"/>
                 <TextView
+
                     android:layout_centerHorizontal="true"
                    android:layout_below="@+id/icon_login"
                     android:id="@+id/name_login"

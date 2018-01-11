@@ -24,9 +24,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"/>
     </LinearLayout>
-    <!--<GridView-->
-        <!--android:numColumns="2"-->
-        <!--android:id="@+id/gridview"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"></GridView>-->
+    <ListView
+
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 </LinearLayout>
