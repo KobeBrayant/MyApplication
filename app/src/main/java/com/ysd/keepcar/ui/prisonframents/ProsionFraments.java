@@ -25,6 +25,7 @@ import com.ysd.keepcar.base.BaseFragMent;
 import com.ysd.keepcar.ui.loginmodoule.LoginActivity;
 import com.ysd.keepcar.ui.myview.CircleImageView;
 import com.ysd.keepcar.ui.prisonframents.activity.LoveCarActivity;
+import com.ysd.keepcar.ui.prisonframents.activity.OrderActivity;
 import com.ysd.keepcar.ui.prisonframents.adapter.ProsionFragmentAdapter;
 import com.ysd.keepcar.ui.prisonframents.smallfragment.ChuZHiFragment;
 import com.ysd.keepcar.ui.prisonframents.smallfragment.DingEQuanFragment;
@@ -85,7 +86,13 @@ public class ProsionFraments extends BaseFragMent {
         chuzhi_btn = view.findViewById(R.id.chuzhi_btn);
         yuequan_btn = view.findViewById(R.id.yuequan_btn);
         dingequan_btn = view.findViewById(R.id.dingequan_btn);
+        daifukuan_rabtn = view.findViewById(R.id.daifukuan_rabtn);
+        daishigong_rabtn = view.findViewById(R.id.daishigong_rabtn);
+        daifahuo_rabtn = view.findViewById(R.id.daifahuo_rabtn);
+        daishouhuo_rabtn = view.findViewById(R.id.daishouhuo_rabtn);
+        daipingjia_rabtn = view.findViewById(R.id.daipingjia_rabtn);
         rid_group = view.findViewById(R.id.rid_group);
+        group_dingdan = view.findViewById(R.id.group_dingdan);
         mycar = view.findViewById(R.id.my_car);
 
     }
@@ -114,6 +121,19 @@ public class ProsionFraments extends BaseFragMent {
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), LoveCarActivity.class);
                 startActivity(intent);
+            }
+        });
+        group_dingdan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.daifukuan_rabtn:
+                        Intent intent=new Intent(getActivity(), OrderActivity.class);
+                        startActivity(intent);
+                        break;
+
+
+                }
             }
         });
         fragmentArrayList = new ArrayList<>();

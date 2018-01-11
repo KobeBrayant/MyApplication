@@ -87,7 +87,8 @@
             android:name="com.amap.api.v2.apikey"
             android:value="d31f7720dd1ae447f680d488d230e735" />
 
-        <activity android:name=".ui.prisonframents.activity.LoveCarActivity"></activity>
+        <activity android:name=".ui.prisonframents.activity.LoveCarActivity" />
+        <activity android:name=".ui.prisonframents.activity.OrderActivity"></activity>
     </application>
 
 </manifest>
