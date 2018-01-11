@@ -30,6 +30,7 @@ import com.ysd.keepcar.ui.prisonframents.smallfragment.ChuZHiFragment;
 import com.ysd.keepcar.ui.prisonframents.smallfragment.DingEQuanFragment;
 import com.ysd.keepcar.ui.prisonframents.smallfragment.JiFenFragment;
 import com.ysd.keepcar.ui.prisonframents.smallfragment.Yu_e_QuanFragment;
+import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
 import java.util.ArrayList;
 
@@ -70,6 +71,7 @@ public class ProsionFraments extends BaseFragMent {
     private ArrayList<Fragment> fragmentArrayList;
     private ImageView top;
     private RelativeLayout mycar;
+    private TextView user_name;
 
     @Override
     protected int getLayoutId() {
@@ -77,6 +79,7 @@ public class ProsionFraments extends BaseFragMent {
     }
     @Override
     protected void init(View view) {
+        user_name = view.findViewById(R.id.name_login);
         icon_login=view.findViewById(R.id.icon_login);
         prosion_viewpager = view.findViewById(R.id.prosion_viewpager);
         jifen_btn = view.findViewById(R.id.jifen_btn);
@@ -89,6 +92,14 @@ public class ProsionFraments extends BaseFragMent {
         mycar = view.findViewById(R.id.my_car);
 
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String userphone = (String) SharedPreferencesUtils.getParam(getContext(), "userphone", "");
+        user_name.setText(userphone);
+    }
+
     @Override
     protected void loadData() {
         icon_login.setOnClickListener(new View.OnClickListener() {

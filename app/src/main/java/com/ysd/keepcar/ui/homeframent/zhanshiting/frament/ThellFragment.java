@@ -8,12 +8,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,14 +25,20 @@ import com.gjiazhe.wavesidebar.WaveSideBar;
 import com.google.gson.Gson;
 import com.ysd.keepcar.R;
 import com.ysd.keepcar.base.BaseFragMent;
+import com.ysd.keepcar.ui.homeframent.zhanshiting.MyZTAdapter;
+import com.ysd.keepcar.ui.homeframent.zhanshiting.ZTBean;
 import com.ysd.keepcar.ui.homeframent.zhanshiting.frament.beandapter.BranBeen;
 import com.ysd.keepcar.ui.homeframent.zhanshiting.frament.beandapter.MyBrandAdapter;
+import com.ysd.keepcar.utils.Cjson;
 import com.ysd.keepcar.utils.DropBean;
 import com.ysd.keepcar.utils.DropdownButton;
+import com.ysd.keepcar.utils.SharedPreferencesUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -103,7 +111,8 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
     private boolean isChangeGroup = false;
     private Button hua_queding;
     private Button hua_quxiao;
-
+    private ListView car_item;
+    private List<ZTBean.DataBean.ListBean> carListBean;
     @Override
         protected int getLayoutId() {
         return R.layout.fragment_thell;
@@ -111,6 +120,7 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
 
     @Override
     protected void init(View view) {
+        car_item = (ListView) view.findViewById(R.id.ershoucar);
         dropdownButton1 = (TextView) view.findViewById(R.id.time1);
         dropdownButton2 = (DropdownButton) view.findViewById(R.id.time2);
         dropdownButton2.setText("4S店不限");
@@ -725,6 +735,8 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
         orings.add(new DropBean("车龄最小"));
          orings.add(new DropBean("里程最少"));
 
+
+
     }
 
     @Override
@@ -829,5 +841,56 @@ public class ThellFragment extends BaseFragMent implements WaveSideBar.OnSelectI
                 getActivity().finish();
                 break;
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        OkHttpClient client = new OkHttpClient();
+
+        Map<String,Object> kp = new HashMap<>();
+        String ticket = (String) SharedPreferencesUtils.getParam(getContext(), "ticket", "");
+        kp.put("ticket",ticket);
+        kp.put("shopCode","店面不限");
+        kp.put("sortType","默认排序");
+        kp.put("pageNum",0);
+        kp.put("pageSize",10);
+        String s = Cjson.toJSONMap(kp);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"),s);
+        Request request = new Request.Builder()
+                .url("http://39.106.173.47:8080/app/carExhibition/oldCarList.do")
+                .post(requestBody)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+
+
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.e("TAG",e.toString());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String string = response.body().string();
+
+                ZTBean ztBean = new Gson().fromJson(string, ZTBean.class);
+                List<ZTBean.DataBean.ListBean> list = ztBean.getData().getList();
+                carListBean = new ArrayList<>();
+                carListBean.addAll(list);
+
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        MyZTAdapter adapter = new MyZTAdapter(getActivity(),carListBean);
+                        car_item.setAdapter(adapter);
+
+                    }
+                });
+            }
+        });
     }
 }
