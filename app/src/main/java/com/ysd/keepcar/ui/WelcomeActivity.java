@@ -32,7 +32,7 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
     private ForSFragment fragment_2;
     private ShopFraments fragment_3;
     private ProsionFraments fragment_4;
-
+    private long lastTime;//上一次点击back键的时间毫秒数
     @Override
     protected int getLayoutId() {
         return R.layout.home_one;
@@ -116,6 +116,15 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void initData() {
 
+    }
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - lastTime < 2000) {
+            finish();
+        } else {
+            ShowToast("双击退出应用");
+            lastTime = System.currentTimeMillis();
+        }
     }
 
     }

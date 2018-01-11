@@ -340,7 +340,7 @@ public class HomeFragment extends BaseFragMent implements View.OnClickListener {
                         .addToBackStack(null)
                         .commit();
                 break;
-                //展示
+               //展示
             case  R.id.top_zhanshi:
                 startActivity(new Intent(getActivity(), TheHallActivity.class));
                 break;
