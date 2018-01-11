@@ -51,7 +51,5 @@ dependencies {
     compile 'com.amap.api:3dmap:latest.integration'
 //定位功能
     compile 'com.amap.api:location:latest.integration'
-
-    compile 'com.amap.api:location:latest.integration'
     compile 'com.gjiazhe:wavesidebar:1.0.2'
 }

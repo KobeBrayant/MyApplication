@@ -3,22 +3,22 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
-<ImageView
-     android:scaleType="fitXY"
-    android:src="@mipmap/ic_launcher"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:id="@+id/imageView2" />
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/jingping_image" />
 
     <TextView
 
         android:layout_marginLeft="20dp"
-        android:id="@+id/textView2"
+        android:id="@+id/jingpin_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/jingping_image"
         android:text="定值卷"
         android:textSize="20dp" />
 
@@ -28,47 +28,37 @@
         android:layout_height="18dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/jingpin_name"
         android:src="@mipmap/ic_launcher"
-        android:id="@+id/imageView5" />
+        android:id="@+id/jingpin_biao" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/jingpin_name"
         android:layout_marginLeft="39dp"
         android:layout_marginStart="39dp"
         android:text="惠尔普斯大公司"
-        android:id="@+id/jifen_gongsi" />
-
-    <ImageView
-
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignLeft="@+id/imageView5"
-        android:layout_alignStart="@+id/imageView5"
-        android:src="@mipmap/jifen" />
+        android:id="@+id/jingpin_gongsi" />
 
     <TextView
-        android:layout_marginLeft="4dp"
+        android:id="@+id/jingpin_qian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/jifen_gongsi"
-        android:layout_alignStart="@+id/jifen_gongsi"
-        android:layout_below="@+id/jifen_gongsi"
-        android:text="200"
-        android:textColor="#FF0000"
-        android:id="@+id/textView7" />
+        android:layout_alignLeft="@+id/jingpin_biao"
+        android:layout_alignStart="@+id/jingpin_biao"
+        android:layout_below="@+id/jingpin_gongsi"
+        android:text="￥200"
+        android:textColor="#FF0000" />
 
     <TextView
+        android:id="@+id/jingpin_fukuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/jifen_gongsi"
+        android:layout_below="@+id/jingpin_gongsi"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
         android:text="已兑200" />

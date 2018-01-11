@@ -82,10 +82,14 @@
             android:label="@string/title_activity_huoqu"
             android:theme="@style/CityPicker.NoActionBar" />
         <activity android:name=".ui.shopingframents.activity.ShouhuoActivity" />
+        <activity android:name=".ui.xiche.DetailsActivity" />
+        <activity android:name=".ui.xiche.RegCarActivity"></activity>
+
+
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="d31f7720dd1ae447f680d488d230e735" />
+            android:value="c2102771c747d84e33fc8fe9cda23626" />
 
         <activity android:name=".ui.prisonframents.activity.LoveCarActivity" />
         <activity android:name=".ui.prisonframents.activity.OrderActivity"></activity>
