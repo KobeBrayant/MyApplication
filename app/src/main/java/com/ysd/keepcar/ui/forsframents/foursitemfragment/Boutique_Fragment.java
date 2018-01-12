@@ -49,7 +49,7 @@ public class Boutique_Fragment extends BaseFragMent {
     protected void init(View view) {
         bouti_grid = (GridView)view.findViewById(R.id.bouti_grid);
     }
-
+//hiugjhfyfyjh
     @Override
     protected void loadData() {
 
