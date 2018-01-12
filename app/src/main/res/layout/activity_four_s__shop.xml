@@ -15,11 +15,11 @@
 
         <ImageView
             android:id="@+id/image_return"
-            android:layout_width="50px"
-            android:layout_height="50px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24px"
             android:layout_marginTop="24px"
-            android:background="@mipmap/ic_launcher"
+            android:background="@mipmap/back"
             android:layout_marginLeft="24px" />
 
         <ImageView
