@@ -6,13 +6,15 @@
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="300px"
-    android:src="@mipmap/ic_launcher"/>
+    android:src="@mipmap/ic_launcher"
+    android:id="@+id/viewitem_image"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="普利司同泰然者T001"
         android:textSize="@dimen/txt_20"
-        android:layout_marginTop="20px"/>
+        android:layout_marginTop="20px"
+        android:id="@+id/viewitem_name"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,11 +23,13 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/viewitem_imagesmall"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="普利司同泰然者店铺"
+            android:id="@+id/viewitem_dianname"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
 <LinearLayout
@@ -38,12 +42,14 @@
         android:layout_height="wrap_content"
         android:text="￥369"
         android:textSize="@dimen/txt_20"
-        android:textColor="@color/red"/>
+        android:textColor="@color/red"
+        android:id="@+id/viewitem_money"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="639人付款"
         android:textSize="@dimen/txt_20"
-        android:layout_marginLeft="450px"/>
+        android:layout_marginLeft="450px"
+        android:id="@+id/viewitem_people"/>
 </LinearLayout>
 </LinearLayout>
