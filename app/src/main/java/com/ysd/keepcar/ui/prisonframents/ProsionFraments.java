@@ -158,7 +158,7 @@ public class ProsionFraments extends BaseFragMent {
         fragmentArrayList.add(dingEQuanFragment);
         ProsionFragmentAdapter adapter=new ProsionFragmentAdapter(getActivity().getSupportFragmentManager(),fragmentArrayList);
         prosion_viewpager.setAdapter(adapter);
-
+        prosion_viewpager.setCurrentItem(0);
         rid_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

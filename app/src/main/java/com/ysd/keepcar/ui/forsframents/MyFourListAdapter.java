@@ -23,17 +23,16 @@ import java.util.List;
 class MyFourListAdapter extends BaseAdapter {
 
     Context context;
-    List<FourBean> Flist;
+    List<ForFragmentBeen.DataBean.ListBean> list;
 
-    public MyFourListAdapter(Context context, List<FourBean> flist) {
+    public MyFourListAdapter(Context context, List<ForFragmentBeen.DataBean.ListBean> list) {
         this.context = context;
-        Flist = flist;
+        this.list = list;
     }
-
 
     @Override
     public int getCount() {
-        return Flist.size();
+        return list.size();
     }
 
     @Override
@@ -51,8 +50,10 @@ class MyFourListAdapter extends BaseAdapter {
         View inflate = LayoutInflater.from(context).inflate(R.layout.four_s_item, null);
         ImageView icon_img = inflate.findViewById(R.id.imageView4);
         TextView carName = inflate.findViewById(R.id.textView8);
-        Glide.with(context).load(Flist.get(i).getImg()).into(icon_img);
-        carName.setText(Flist.get(i).getName());
+        TextView forcity = inflate.findViewById(R.id.for_city);
+        Glide.with(context).load(list.get(i).getLogo()).into(icon_img);
+        carName.setText(list.get(i).getShopName());
+        forcity.setText(list.get(i).getCityName());
         return inflate;
     }
 }

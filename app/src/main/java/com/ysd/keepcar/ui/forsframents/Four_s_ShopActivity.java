@@ -45,6 +45,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
     private LinearLayout btn_daohang;
     private PopupWindow popupWindow;
     private PopupWindow popupWindow1;
+    public String shop;
 
 
     @Override
@@ -87,6 +88,8 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         list.add("二手车");
         list.add("积分商场");
         list.add("洗车");
+        Intent intent = getIntent();
+        shop = intent.getStringExtra("shop");
 
         ArrayList<Fragment> fragmentslist = new ArrayList<>();
         Boutique_Fragment boutique_fragment = new Boutique_Fragment();
@@ -99,6 +102,7 @@ public class Four_s_ShopActivity extends BaseActivity implements View.OnClickLis
         fragmentslist.add(the_new_car_fragment);
         fragmentslist.add(usedCar_fragment);
         fragmentslist.add(integral_mall_fragment);
+
 
         FragmentManager fm = getSupportFragmentManager();
 

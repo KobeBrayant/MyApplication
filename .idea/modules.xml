@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://H:\studioDaima\MyCarLove\MyApplication.iml" filepath="H:\studioDaima\MyCarLove\MyApplication.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyCarLove.iml" filepath="$PROJECT_DIR$/MyCarLove.iml" />
-      <module fileurl="file://D:\4SCar\MyApplication\MyCarLove.iml" filepath="D:\4SCar\MyApplication\MyCarLove.iml" />
-      <module fileurl="file://E:\Users\ReRenWu\MyApplication\MyCarLove.iml" filepath="E:\Users\ReRenWu\MyApplication\MyCarLove.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
