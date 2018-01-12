@@ -55,6 +55,7 @@ public class Boutique_Fragment extends BaseFragMent {
 
         OkhttpUtils okhttpUtils = OkhttpUtils.newInstance();
         Map<String,Object> map=new HashMap<>();
+        //aaaaaaaaaaaa
         //String shopcode = (String) SharedPreferencesUtils.getParam(getActivity(), "shopcode", null);
         Four_s_ShopActivity activity = (Four_s_ShopActivity) getActivity();
         String shop = activity.shop;
