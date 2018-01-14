@@ -65,6 +65,7 @@ public class Boutique_Fragment extends BaseFragMent {
         map.put("shopCode",shop);
         map.put("pageNum","0");
         map.put("pageSize","15");
+        //hjkguigikgkj
         final String s = Cjson.toJSONMap(map);
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"),s);
         Call call = okhttpUtils.doPost(HttpUrl.BASEURL + "boutique/queryBoutiqueByShop.do", requestBody);
